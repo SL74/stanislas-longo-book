@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les 50 Lois du Pouvoir Contemporain</title>
+    <style>
+        :root {
+            --color-black: #0a0a0a;
+            --color-dark-gray: #1a1a1a;
+            --color-gold: #c9a961;
+            --color-gold-light: #d4b896;
+            --color-white: #fafafa;
+            --color-light-gray: #f0f0f0;
+            --color-text: #333;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: var(--color-text); background: var(--color-white); }
+        nav { background: var(--color-black); color: var(--color-white); padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        nav .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; }
+        nav .logo span { color: var(--color-gold); }
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a { color: var(--color-white); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        nav a:hover { color: var(--color-gold); }
+        .hero { background: linear-gradient(135deg, var(--color-black), var(--color-dark-gray)); color: var(--color-white); padding: 6rem 2rem; text-align: center; }
+        .hero-content { max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .hero .tagline { font-size: 1.3rem; color: var(--color-gold-light); margin-bottom: 1.5rem; }
+        .hero .subtitle { font-size: 1.1rem; color: #ccc; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-divider { width: 80px; height: 3px; background: var(--color-gold); margin: 2rem auto; }
+        .cta-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .btn { padding: 1rem 2rem; font-size: 1rem; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; display: inline-block; transition: all 0.3s; }
+        .btn-primary { background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light)); color: var(--color-black); font-weight: 700; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(201, 169, 97, 0.4); }
+        .btn-secondary { background: transparent; color: var(--color-gold-light); border: 2px solid var(--color-gold-light); }
+        .btn-secondary:hover { background: rgba(201, 169, 97, 0.1); }
+        .form-section { background: var(--color-light-gray); padding: 4rem 2rem; }
+        .form-container { max-width: 600px; margin: 0 auto; }
+        .form-section h2 { font-size: 2rem; text-align: center; color: var(--color-black); margin-bottom: 1rem; }
+        .form-description { text-align: center; color: #666; margin-bottom: 2rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--color-black); }
+        .form-group input { width: 100%; padding: 0.8rem 1rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+        .form-group input:focus { outline: none; border-color: var(--color-gold); box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1); }
+        .form-submit { width: 100%; padding: 1rem; background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light)); color: var(--color-black); border: none; border-radius: 4px; font-size: 1rem; font-weight: 700; cursor: pointer; }
+        .form-consent { font-size: 0.85rem; color: #666; margin-bottom: 1rem; line-height: 1.4; }
+        .lessons-section { padding: 4rem 2rem; background: var(--color-white); }
+        .lessons-container { max-width: 1100px; margin: 0 auto; }
+        .lessons-header { text-align: center; margin-bottom: 3rem; }
+        .lessons-header h2 { font-size: 2.2rem; color: var(--color-black); margin-bottom: 1rem; }
+        .lessons-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .lesson-card { background: var(--color-light-gray); padding: 2rem; border-radius: 8px; border-left: 4px solid var(--color-gold); transition: all 0.3s; }
+        .lesson-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+        .lesson-number { font-size: 2.5rem; font-weight: 700; color: var(--color-gold); margin-bottom: 0.5rem; }
+        .lesson-title { font-size: 1.2rem; font-weight: 600; color: var(--color-black); margin-bottom: 1rem; }
+        .lesson-text { color: #555; line-height: 1.7; }
+        .features-section { padding: 4rem 2rem; background: var(--color-light-gray); }
+        .features-container { max-width: 1000px; margin: 0 auto; }
+        .features-header { text-align: center; margin-bottom: 3rem; }
+        .features-header h2 { font-size: 2.2rem; color: var(--color-black); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .feature-box { background: var(--color-white); padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-box h3 { font-size: 1.2rem; color: var(--color-black); margin-bottom: 0.8rem; }
+        .feature-box p { color: #666; }
+        .author-section { background: var(--color-dark-gray); color: var(--color-white); padding: 4rem 2rem; }
+        .author-container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .author-image { width: 280px; height: 280px; border-radius: 8px; border: 2px solid var(--color-gold); overflow: hidden; margin: 0 auto; }
+        .author-image img { width: 100%; height: 100%; object-fit: cover; }
+        .author-content h3 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-gold); }
+        .author-content p { margin-bottom: 1rem; line-height: 1.8; color: #ddd; }
+        .testimonials-section { padding: 4rem 2rem; background: var(--color-white); }
+        .testimonials-container { max-width: 1000px; margin: 0 auto; }
+        .testimonials-header { text-align: center; margin-bottom: 3rem; }
+        .testimonials-header h2 { font-size: 2.2rem; color: var(--color-black); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .testimonial-card { background: var(--color-light-gray); padding: 2rem; border-radius: 8px; border-top: 3px solid var(--color-gold); transition: all 0.3s; }
+        .testimonial-card:hover { box-shadow: 0 10px 30px rgba(201, 169, 97, 0.15); }
+        .testimonial-text { font-style: italic; color: #555; margin-bottom: 1.5rem; line-height: 1.7; }
+        .testimonial-author { font-weight: 600; color: var(--color-black); }
+        footer { background: var(--color-black); color: var(--color-white); padding: 3rem 2rem; text-align: center; }
+        .footer-content { max-width: 900px; margin: 0 auto; }
+        .footer-links { margin: 1.5rem 0; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+        .footer-links a { color: var(--color-gold); text-decoration: none; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav ul { gap: 1rem; font-size: 0.8rem; }
+            .author-container { grid-template-columns: 1fr; }
+            .btn { width: 100%; max-width: 300px; }
+        }
+        .book-section { padding: 4rem 2rem; background: var(--color-white); }
+        .book-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .book-cover { max-width: 400px; margin: 0 auto; }
+        .book-cover img { width: 100%; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .book-content h2 { font-size: 2.5rem; color: var(--color-black); margin-bottom: 1.5rem; }
+        .book-description { font-size: 1.05rem; color: #555; line-height: 1.8; margin-bottom: 2rem; }
+        .book-highlights { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+        .book-highlight { display: flex; gap: 0.75rem; }
+        .book-highlight-icon { color: var(--color-gold); font-size: 1.3rem; flex-shrink: 0; }
+        .book-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .book-cta .btn { flex: 1; min-width: 180px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">STANISLAS <span>LONGO</span></div>
+        <ul>
+            <li><a href="#livre">Le Livre</a></li>
+            <li><a href="#lecons">5 Leçons</a></li>
+            <li><a href="#auteur">À Propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Les 50 Lois du Pouvoir Contemporain</h1>
+            <p class="tagline">Manuel de Lucidité Stratégique pour les Bâtisseurs de l'Afrique Nouvelle</p>
+            <div class="hero-divider"></div>
+            <p class="subtitle">Le pouvoir contemporain ne se prend plus, il se conçoit. Découvrez comment les architectes africains maîtrisent l'invisible pour structurer le réel.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' })">Accès Gratuit aux 5 Leçons</button>
+                <button class="btn btn-secondary" onclick="alert('Acheter le livre complet')">Commander le Livre</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-section" id="livre">
+        <div class="book-container">
+            <div class="book-cover">
+                <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/a5c871a0-e764-4d24-a418-b7ba84859902.png" alt="Couverture">
+            </div>
+            <div class="book-content">
+                <h2>Les 50 Lois du Pouvoir Contemporain</h2>
+                <p class="book-description">La doctrine complète du pouvoir moderne en Afrique. 50 principes forgés dans 20 ans de terrain stratégique.</p>
+                <div class="book-highlights">
+                    <div class="book-highlight">
+                        <div class="book-highlight-icon">✓</div>
+                        <div><strong>320 pages</strong> de doctrine structurée</div>
+                    </div>
+                    <div class="book-highlight">
+                        <div class="book-highlight-icon">✓</div>
+                        <div><strong>50 lois</strong> avec cas d'étude africains</div>
+                    </div>
+                </div>
+                <div class="book-cta">
+                    <button class="btn btn-primary" onclick="document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' })">Lire l'Extrait</button>
+                    <button class="btn btn-secondary">Commander</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section" id="form-section">
+        <div class="form-container">
+            <h2>Accédez Immédiatement</h2>
+            <p class="form-description">Téléchargez gratuitement l'intro + Loi 1 + Chapitre 1</p>
+            <form
+                id="emailForm"
+                action="https://formspree.io/f/xdkqrwpd"
+                method="POST"
+            >
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Votre rôle / Position</label>
+                    <input type="text" id="role" name="role" placeholder="Ex: Entrepreneur, Leader, Décideur">
+                </div>
+                <div class="form-consent">
+                    En cliquant, vous acceptez de recevoir nos emails avec contenu exclusif et offres spéciales. Vous pouvez vous désabonner à tout moment. <a href="#">Politique de confidentialité</a>
+                </div>
+                <button type="submit" class="form-submit">Accéder Maintenant</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="lessons-section" id="lecons">
+        <div class="lessons-container">
+            <div class="lessons-header">
+                <h2>Les 5 Leçons Révolutionnaires</h2>
+            </div>
+            <div class="lessons-grid">
+                <div class="lesson-card">
+                    <div class="lesson-number">1</div>
+                    <div class="lesson-title">Domine le Récit Avant la Victoire</div>
+                    <div class="lesson-text">Les faits sont muets. Celui qui impose le cadre contrôle la décision.</div>
+                </div>
+                <div class="lesson-card">
+                    <div class="lesson-number">2</div>
+                    <div class="lesson-title">Un Écart de 1000x Ne Se Négocie Pas</div>
+                    <div class="lesson-text">Quand votre productivité dépasse les normes, vous devenez l'infrastructure inévitable.</div>
+                </div>
+                <div class="lesson-card">
+                    <div class="lesson-number">3</div>
+                    <div class="lesson-title">Deviens Une Ligne Budgétaire</div>
+                    <div class="lesson-text">Devenez un besoin structurel. L'infrastructure n'est jamais négociée.</div>
+                </div>
+                <div class="lesson-card">
+                    <div class="lesson-number">4</div>
+                    <div class="lesson-title">L'Utilité Précède la Visibilité</div>
+                    <div class="lesson-text">Deviens utile avant d'être visible. L'autorité se gagne dans le silence.</div>
+                </div>
+                <div class="lesson-card">
+                    <div class="lesson-number">5</div>
+                    <div class="lesson-title">L'Architecture Silencieuse du Pouvoir</div>
+                    <div class="lesson-text">Le pouvoir ne s'exhibe pas. Ce qui structure invisiblement devient plus puissant.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="features-container">
+            <div class="features-header">
+                <h2>Ce Que Vous Allez Apprendre</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">📖</div>
+                    <h3>50 Lois</h3>
+                    <p>Une doctrine complète bâtie sur 20 ans de terrain</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🏗️</div>
+                    <h3>Infrastructure</h3>
+                    <p>Maîtriser les flux qui structurent les décisions</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Lucidité</h3>
+                    <p>Les principes appliqués réellement</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Contexte Africain</h3>
+                    <p>Analyses applicables au continent</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Action</h3>
+                    <p>À implémenter dès demain</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Pour Tous</h3>
+                    <p>Entrepreneurs, décideurs, stratèges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="author-section" id="auteur">
+        <div class="author-container">
+            <div class="author-image">
+                <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/9889879a-887d-4da2-a262-3d439afaa10c.png" alt="Stanislas Longo">
+            </div>
+            <div class="author-content">
+                <h3>Stanislas Longo</h3>
+                <p>Architecte stratégique avec 20 ans d'expérience en finance et transformation des marchés africains.</p>
+                <p>J'ai accompagné gouvernements et entreprises à travers les transformations les plus complexes du continent.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <h2>Ce Que Les Lecteurs Disent</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"Ce livre transforme votre compréhension du pouvoir. Du terrain solidifié en principes actionnables."</div>
+                    <div class="testimonial-author">Michel T. - Entrepreneur</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"La Loi 1 seule m'a sauvé d'une négociation désastreuse. Stanislas voit des patterns que personne ne voit."</div>
+                    <div class="testimonial-author">Aïcha K. - Consultante</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"Enfin quelqu'un qui parle du pouvoir en Afrique sans condescendance, avec rigueur et lucidité."</div>
+                    <div class="testimonial-author">David O. - Leader</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Les 50 Lois du Pouvoir Contemporain</h3>
+            <div class="footer-links">
+                <a href="#livre">Le Livre</a>
+                <a href="#lecons">Les 5 Leçons</a>
+                <a href="#auteur">À Propos</a>
+                <a href="mailto:contact@stanislas-longo.com">Email</a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.85rem;">&copy; 2025 Stanislas Longo. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        console.log('✅ Stanislas Longo Book - Version 1.1.0');
+    </script>
+</body>
+</html>
