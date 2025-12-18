@@ -191,9 +191,9 @@
 
     <section class="form-section" id="form-section">
         <div class="form-container">
-            <form id="downloadForm" method="POST" action="https://formspree.io/f/xdkqrwpd">
+            <form id="downloadForm">
                 <h2>Téléchargez gratuitement l'intro + partie 1</h2>
-
+                
                 <div class="form-group">
                     <label for="email" class="form-label">Votre email</label>
                     <input type="email" id="email" name="email" required placeholder="exemple@email.com" class="form-control">
@@ -340,20 +340,46 @@
     </footer>
 
     <script>
-        document.getElementById('downloadForm').addEventListener('submit', function(e) {
+        document.getElementById('downloadForm').addEventListener('submit', async function(e) {
             e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {
+                email: formData.get('email'),
+                firstName: formData.get('firstName'),
+                consent: formData.get('consent'),
+                _subject: 'Nouveau téléchargement - Intro + Partie 1',
+                _captcha: 'false'
+            };
 
-            // Envoyer les données à Formspree
-            fetch('https://formspree.io/f/xdkqrwpd', {
-                method: 'POST',
-                body: new FormData(this),
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
+            try {
+                const response = await fetch('https://formspree.io/f/xdkqrwpd', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
                 if (response.ok) {
-                    // Rediriger vers le PDF après soumission réussie
-                    window.location.href = '/assets/EXTRAITS-MANUSCRIT-AVANT-PROPOS-INTRODUCTION-PARTIE-I-COMPLETE.pdf';
+                    // ✅ Soumission réussie - Télécharger le PDF
+                    const link = document.createElement('a');
+                    link.href = '/assets/EXTRAITS-MANUSCRIT-AVANT-PROPOS-INTRODUCTION-PARTIE-I-COMPLETE.pdf';
+                    link.download = 'Les-50-Lois-Intro-Partie-1.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    
+                    // Message de succès
+                    alert('✅ Merci ! Le PDF se télécharge. Vérifiez aussi votre email.');
+                } else {
+                    alert('❌ Erreur lors de l\'envoi. Réessayez.');
                 }
-            });
+            } catch (error) {
+                console.error('Erreur:', error);
+                alert('❌ Erreur de connexion.');
+            }
         });
     </script>
 </body>
