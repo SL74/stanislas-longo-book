@@ -87,176 +87,166 @@
         }
         
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 2rem 4rem;
         }
         
-        .article {
-            background-color: #111;
-            border: 1px solid #222;
-            border-radius: 8px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .article-header {
-            border-bottom: 2px solid #c9a961;
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .article-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            font-family: Georgia, serif;
-        }
-        
-        .article-meta {
-            color: #999;
-            font-size: 0.9rem;
-        }
-        
-        .section {
-            margin-bottom: 2.5rem;
-        }
-        
-        .section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #c9a961;
-            font-weight: 600;
-        }
-        
-        .section h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-            margin-top: 1.5rem;
-            font-weight: 600;
-        }
-        
-        .section p {
-            margin-bottom: 1rem;
-            color: #ddd;
-        }
-        
-        .section ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .section li {
-            margin-bottom: 0.5rem;
-            color: #ddd;
-        }
-        
-        .highlight-box {
-            background-color: #1a1a1a;
-            border-left: 4px solid #c9a961;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .highlight-box h3 {
-            color: #c9a961;
-            margin-top: 0;
-            font-size: 1.1rem;
-        }
-        
-        .highlight-box p {
-            margin-bottom: 0.8rem;
-        }
-        
-        .data-grid {
+        .analyses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .data-card {
-            background-color: #1a1a1a;
-            padding: 1.5rem;
-            border-radius: 4px;
-            border: 1px solid #333;
-        }
-        
-        .data-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #c9a961;
-            margin-bottom: 0.5rem;
-        }
-        
-        .data-label {
-            font-size: 0.9rem;
-            color: #999;
-        }
-        
-        .warning-box {
-            background-color: #1a1a00;
-            border-left: 4px solid #c9a961;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .warning-box h3 {
-            color: #c9a961;
-            margin-top: 0;
-            font-size: 1.1rem;
-        }
-        
-        .warning-box ul {
-            margin-left: 1.5rem;
-        }
-        
-        .warning-box li {
-            margin-bottom: 0.5rem;
-            color: #ddd;
-        }
-        
-        .source {
-            font-size: 0.85rem;
-            color: #666;
-            font-style: italic;
-            margin-top: 0.5rem;
-        }
-        
-        .cta-box {
-            background-color: #c9a961;
-            color: #000;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
             margin: 3rem 0;
         }
         
-        .cta-box h3 {
-            margin-bottom: 1rem;
+        .analysis-card {
+            background-color: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .analysis-card:hover {
+            border-color: #c9a961;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(201, 169, 97, 0.1);
+        }
+        
+        .card-header {
+            background-color: #1a1a1a;
+            padding: 2rem;
+            border-bottom: 2px solid #c9a961;
+        }
+        
+        .card-number {
+            font-size: 0.85rem;
+            color: #c9a961;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .card-title {
             font-size: 1.5rem;
             font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-family: Georgia, serif;
+            color: #f5f5f5;
         }
         
-        .cta-box p {
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: #999;
+        }
+        
+        .card-body {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-description {
+            color: #ddd;
             margin-bottom: 1.5rem;
-            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
-        .btn {
+        .card-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: auto;
+        }
+        
+        .meta-item {
+            font-size: 0.85rem;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .meta-label {
+            font-weight: 600;
+        }
+        
+        .read-link {
             display: inline-block;
-            background-color: #000;
+            margin-top: 1.5rem;
             color: #c9a961;
-            padding: 0.8rem 2rem;
             text-decoration: none;
-            border-radius: 4px;
             font-weight: 600;
             transition: all 0.3s;
         }
         
-        .btn:hover {
+        .read-link:hover {
+            color: #f5f5f5;
+        }
+        
+        .read-link::after {
+            content: ' →';
+            transition: transform 0.3s;
+        }
+        
+        .analysis-card:hover .read-link::after {
+            transform: translateX(4px);
+        }
+        
+        .coming-soon {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .coming-soon .read-link {
+            color: #666;
+            cursor: not-allowed;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+        
+        .status-published {
+            background-color: rgba(201, 169, 97, 0.2);
+            color: #c9a961;
+        }
+        
+        .status-coming {
+            background-color: rgba(153, 153, 153, 0.2);
+            color: #999;
+        }
+        
+        .info-section {
             background-color: #111;
-            transform: translateY(-2px);
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .info-section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #c9a961;
+            font-family: Georgia, serif;
+        }
+        
+        .info-section p {
+            color: #ddd;
+            margin-bottom: 1rem;
         }
         
         footer {
@@ -285,17 +275,17 @@
                 font-size: 2rem;
             }
             
-            .article {
-                padding: 2rem 1.5rem;
-            }
-            
             nav ul {
                 gap: 1rem;
                 font-size: 0.8rem;
             }
             
-            .data-grid {
+            .analyses-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .card-title {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -320,140 +310,60 @@
     </div>
 
     <div class="container">
-        <article class="article">
-            <div class="article-header">
-                <h1 class="article-title">Guinée : La Victoire qui révèle la Vacance du Réel</h1>
-                <div class="article-meta">Analyse War Room #1 | 2 janvier 2026 | Par Stanislas Longo</div>
-            </div>
-
-            <div class="section">
-                <h2>LE FAIT</h2>
-                <p>Le 28 décembre 2025, le Général Mamady Doumbouya remporte l'élection présidentielle guinéenne avec <strong>86,72% des voix</strong> et une participation officielle de <strong>80,95%</strong>.</p>
-                <p>Le scrutin est boycotté par l'opposition. La CEDEAO reste silencieuse. Les réactions internationales sont feutrées. Pendant ce temps, les investisseurs chinois et émiratis planifient déjà de nouveaux contrats sur la bauxite.</p>
-            </div>
-
-            <div class="highlight-box">
-                <h3>L'ANGLE MORT : LOI 12 — LA VACANCE DU RÉEL</h3>
-                <p><em>« L'absence d'alternative crédible ne prouve pas la vérité du récit officiel. Elle révèle simplement que les acteurs décisifs ont déjà arbitré. »</em></p>
-                <p>Ce qui compte, ce n'est pas qui contrôle le bulletin de vote. C'est qui contrôle la structure de rente et la capacité à la faire durer.</p>
-                <p><strong>La Guinée n'a pas élu un président. Elle a validé un gestionnaire de flux.</strong></p>
-            </div>
-
-            <div class="section">
-                <h2>LA DATA : CE QUE LES CHIFFRES DISENT VRAIMENT</h2>
-                
-                <h3>La Guinée comme station-service mondiale</h3>
-                <div class="data-grid">
-                    <div class="data-card">
-                        <div class="data-number">140M</div>
-                        <div class="data-label">tonnes de bauxite exportées en 2024</div>
-                    </div>
-                    <div class="data-card">
-                        <div class="data-number">+23%</div>
-                        <div class="data-label">croissance exports T3 2025</div>
-                    </div>
-                    <div class="data-card">
-                        <div class="data-number">85%</div>
-                        <div class="data-label">des exportations vers la Chine</div>
-                    </div>
-                    <div class="data-card">
-                        <div class="data-number">25-30%</div>
-                        <div class="data-label">des réserves mondiales</div>
-                    </div>
+        <div class="analyses-grid">
+            <!-- BRIEF #1 -->
+            <article class="analysis-card">
+                <div class="card-header">
+                    <div class="card-number">Analysis #1</div>
+                    <h2 class="card-title">Guinée : La Vacance du Réel</h2>
+                    <p class="card-subtitle">L'élection de Doumbouya révèle l'absence d'alternative crédible</p>
                 </div>
-                <p class="source">Sources : Agence Ecofin, octobre 2025 ; USGS 2024</p>
+                <div class="card-body">
+                    <div class="status-badge status-published">PUBLIÉ</div>
+                    <p class="card-description">Comment lire la victoire électorale de Mamady Doumbouya à 86,72% ? Pas comme un triomphe démocratique, mais comme un signal de vacance du réel : l'absence d'alternative crédible que les acteurs décisifs ont déjà arbitrée.</p>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Publié</span>
+                            <span>2 janvier 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Loi</span>
+                            <span>Loi 12 : Vacance du Réel</span>
+                        </div>
+                    </div>
+                    <a href="/analyses-war-room/guinee-vacance-du-reel" class="read-link">Lire l'analyse</a>
+                </div>
+            </article>
 
-                <h3>Le raffinage local — encore marginal mais stratégique</h3>
-                <ul>
-                    <li><strong>78 000 tonnes d'alumine</strong> exportées au T3 2025 (vs 140M tonnes de bauxite brute)</li>
-                    <li>Doctrine 2024-2025 : <strong>« Extraction ici, raffinage ici »</strong></li>
-                    <li><strong>51 licences minières récupérées</strong> en mai 2025 pour non-respect des engagements de transformation locale</li>
-                    <li>Contrat signé en décembre 2024 avec le chinois <strong>SPIC</strong> pour une raffinerie locale</li>
-                </ul>
-                <p class="source">Sources : Metal.com, La Tribune Afrique (mai-décembre 2025)</p>
-
-                <h3>Dette et créanciers — la patience stratégique</h3>
-                <ul>
-                    <li>FMI (avril 2024) : risque de <strong>surendettement global</strong> en hausse</li>
-                    <li>Investissements chinois massifs <strong>sans conditionnalité politique</strong></li>
-                    <li>Arbitrages potentiels : investisseurs émiratis <strong>Axis</strong> perdent des permis et engagent des procédures fin décembre 2025</li>
-                </ul>
-                <p class="source">Sources : Coface, Jeune Afrique (décembre 2025)</p>
-            </div>
-
-            <div class="section">
-                <h2>IMPLICATIONS</h2>
-                
-                <h3>Pour les investisseurs</h3>
-                <ul>
-                    <li>Ne pas miser sur une transition démocratique. Privilégier la <strong>structuration de la chaîne bauxite-alumine</strong>.</li>
-                    <li>Le raffinage local pourrait multiplier la valeur par tonne de <strong>3 à 5 fois</strong>.</li>
-                    <li>Le deal avec la Chine (infrastructure contre accès minier) peut rendre le régime <strong>structurellement résilient pendant une décennie</strong>.</li>
-                    <li>Risque : si la discipline de redistribution de la rente vacille, tout peut basculer rapidement.</li>
-                </ul>
-
-                <h3>Pour les États africains</h3>
-                <ul>
-                    <li>Doumbouya teste le principe <strong>« Souveraineté = maîtrise des flux »</strong>.</li>
-                    <li>Ce modèle dépend de la stabilité des flux ET de la cohésion des forces armées.</li>
-                    <li>Si ça tient, le modèle militaire-gestionnaire-extractif pourrait inspirer le Sahel (Mali, Burkina, voire RDC).</li>
-                </ul>
-
-                <h3>Pour les chancelleries occidentales</h3>
-                <ul>
-                    <li>Les sanctions symboliques ont peu d'effet si <strong>les alternatives économiques ne sont pas crédibles</strong>.</li>
-                    <li>La Chine avance via des raffineries et peut inverser le rapport de force sur le long terme.</li>
-                    <li>Si les Occidentaux boudent pour raisons « démocratiques », ils perdent l'accès à <strong>plus du quart des réserves mondiales de bauxite</strong>.</li>
-                </ul>
-            </div>
-
-            <div class="highlight-box">
-                <h3>LE CHIFFRE QUI TUE</h3>
-                <p><strong>86,72%</strong> n'est pas une mesure de popularité.</p>
-                <p>C'est un <strong>indice de vacance du réel</strong> : l'absence d'alternative crédible pour les acteurs clés (armée, Chine, élites guinéennes, bailleurs régionaux).</p>
-                <p>Quand « la compétition » n'est plus perçue comme nécessaire, le chiffre devient un signal : <strong>« Personne d'autre ne peut faire fonctionner la machine. »</strong></p>
-            </div>
-
-            <div class="section">
-                <h2>QUESTION STRATÉGIQUE</h2>
-                <p>Pour les décideurs africains, investisseurs ou analystes :</p>
-                <p><strong>Est-ce que l'efficacité légitime repose encore sur les urnes ou sur la maîtrise des infrastructures critiques ?</strong></p>
-                <p>La Guinée de Doumbouya pourrait devenir un <strong>laboratoire</strong> pour un modèle militaire-gestionnaire-extractif — si l'équilibre se maintient (distribution de la rente + cohésion des forces armées).</p>
-                <p>Sinon, ce sera un nouveau cas d'école de fragilité structurelle.</p>
-            </div>
-
-            <div class="section">
-                <h2>CONCLUSION : L'ARCHITECTE SILENCIEUX</h2>
-                <p>Doumbouya ne règne pas par charisme ou par mandat populaire.</p>
-                <p>Il règne parce qu'il <strong>restructure les flux</strong> : bauxite vers la Chine, liquidité de Pékin vers Conakry, licences vers ceux qui transforment localement.</p>
-                <p><strong>Celui qui contrôle les flux contrôle tout.</strong></p>
-                <p>Les urnes n'ont été qu'une formalité administrative pour valider ce qui était déjà structuré dans les câbles sous-marins, les contrats miniers et les accords de dette.</p>
-            </div>
-
-            <div class="warning-box">
-                <h3>LIMITES DE L'ANALYSE</h3>
-                <p><strong>Transparence méthodologique :</strong></p>
-                <p>Cette analyse privilégie les rapports de force économiques et les flux. Elle minimise:</p>
-                <ul>
-                    <li>Le facteur populaire (révoltes, frustrations latentes)</li>
-                    <li>La cohésion interne des forces armées</li>
-                    <li>Les chocs exogènes (crises sanitaires, catastrophes naturelles)</li>
-                    <li>Les jeux d'influence multipolaires (UE, Inde, Turquie)</li>
-                </ul>
-                <p><em>Ce n'est pas une prédiction. C'est une grille de lecture.</em></p>
-            </div>
-
-        </article>
-
-        <div class="cta-box">
-            <h3>Découvrir l'univers des 50 Lois</h3>
-            <p>Cette analyse illustre la <strong>Loi 12 : La Vacance du Réel</strong>, l'une des 50 lois du pouvoir contemporain en Afrique.</p>
-            <a href="/#livre" class="btn">Explorer Les 50 Lois du Pouvoir Contemporain</a>
+            <!-- BRIEF #2 -->
+            <article class="analysis-card coming-soon">
+                <div class="card-header">
+                    <div class="card-number">Analysis #2</div>
+                    <h2 class="card-title">RDC : M23, L'Énigme Stratégique</h2>
+                    <p class="card-subtitle">Les architectes silencieux du conflit du Kivu</p>
+                </div>
+                <div class="card-body">
+                    <div class="status-badge status-coming">À VENIR</div>
+                    <p class="card-description">Comprendre le rôle du Rwanda, les intérêts miniers chinois, et pourquoi M23 représente bien plus qu'un groupe rebelle : une stratégie géopolitique à plusieurs étages.</p>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Parution</span>
+                            <span>11 janvier 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Loi</span>
+                            <span>Loi X : [À définir]</span>
+                        </div>
+                    </div>
+                    <a href="/analyses-war-room/rdc-m23" class="read-link">Lire l'analyse</a>
+                </div>
+            </article>
         </div>
 
-        <div style="text-align: center; padding: 2rem 0; color: #999; border-top: 1px solid #222; margin-top: 3rem;">
-            <p style="font-weight: 600; margin-bottom: 0.5rem;">Prochaine Analyse War Room</p>
-            <p style="font-size: 0.95rem;">Dimanche 11 janvier 2026, 19h</p>
+        <div class="info-section">
+            <h2>Méthodologie</h2>
+            <p>Ces analyses appliquent le cadre des <strong>50 Lois du Pouvoir Contemporain</strong> à des situations réelles en Afrique.</p>
+            <p>Focus : flux économiques, rapports de force stratégiques, et structures invisibles qui gouvernent réellement.</p>
         </div>
     </div>
 
