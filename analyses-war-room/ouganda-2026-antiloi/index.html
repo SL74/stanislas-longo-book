@@ -1,27 +1,132 @@
-<!-- BRIEF #3 -->
-<article class="analysis-card">
-    <div class="card-header">
-        <div class="card-number">Analysis #3</div>
-        <h2 class="card-title">Ouganda 2026 : L'Antiloi</h2>
-        <p class="card-subtitle">Quand 40 ans de pouvoir ne construisent rien — l'effondrement annoncé d'un système capturé par un corps</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouganda 2026 : L'Antiloi — Analyses War Room — Stanislas Longo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background-color: #0a0a0a; color: #f5f5f5; line-height: 1.6; }
+        header { background-color: #000; padding: 1.5rem 2rem; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2rem; font-weight: 700; color: #f5f5f5; text-decoration: none; letter-spacing: 0.05em; }
+        .logo span { color: #c9a961; }
+        nav ul { display: flex; gap: 2rem; list-style: none; }
+        nav a { color: #f5f5f5; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        nav a:hover { color: #c9a961; }
+        .hero { max-width: 900px; margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+        .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; font-family: Georgia, serif; }
+        .hero .subtitle { font-size: 1.1rem; color: #999; margin-bottom: 2rem; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .article { background-color: #111; border: 1px solid #222; border-radius: 8px; padding: 3rem; margin-bottom: 2rem; }
+        .article-header { border-bottom: 2px solid #c9a961; padding-bottom: 1.5rem; margin-bottom: 2rem; }
+        .article-title { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; font-family: Georgia, serif; }
+        .article-meta { color: #999; font-size: 0.9rem; }
+        .section { margin-bottom: 2.5rem; }
+        .section h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #c9a961; font-weight: 600; }
+        .section h3 { font-size: 1.2rem; margin-bottom: 0.8rem; margin-top: 1.5rem; font-weight: 600; }
+        .section p { margin-bottom: 1rem; color: #ddd; }
+        .section ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+        .section li { margin-bottom: 0.5rem; color: #ddd; }
+        .section table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        .section th, .section td { padding: 0.8rem; border: 1px solid #333; text-align: left; }
+        .section th { background-color: #1a1a1a; color: #c9a961; font-weight: 600; }
+        .section td { background-color: #0a0a0a; }
+        .highlight-box { background-color: #1a1a1a; border-left: 4px solid #c9a961; padding: 1.5rem; margin: 2rem 0; }
+        .highlight-box h3 { color: #c9a961; margin-top: 0; }
+        .highlight-box blockquote { font-style: italic; color: #ddd; margin: 1rem 0; padding-left: 1rem; border-left: 2px solid #666; }
+        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .data-card { background-color: #1a1a1a; padding: 1.5rem; border-radius: 4px; border: 1px solid #333; }
+        .data-number { font-size: 2rem; font-weight: 700; color: #c9a961; margin-bottom: 0.5rem; }
+        .data-label { font-size: 0.9rem; color: #999; }
+        .warning-box { background-color: #1a1a00; border-left: 4px solid #c9a961; padding: 1.5rem; margin: 2rem 0; }
+        .warning-box h3 { color: #c9a961; margin-top: 0; font-size: 1.1rem; }
+        .source { font-size: 0.85rem; color: #666; font-style: italic; margin-top: 0.5rem; }
+        .cta-box { background-color: #c9a961; color: #000; padding: 2rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
+        .cta-box h3 { margin-bottom: 1rem; font-size: 1.5rem; }
+        .cta-box p { color: #000; }
+        .btn { display: inline-block; background-color: #000; color: #c9a961; padding: 0.8rem 2rem; text-decoration: none; border-radius: 4px; font-weight: 600; transition: all 0.3s; }
+        .btn:hover { background-color: #111; transform: translateY(-2px); }
+        footer { background-color: #000; padding: 3rem 2rem; border-top: 1px solid #222; text-align: center; }
+        footer p { color: #666; font-size: 0.9rem; }
+        footer a { color: #c9a961; text-decoration: none; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .article { padding: 2rem 1.5rem; } nav ul { gap: 1rem; font-size: 0.8rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">STANISLAS <span>LONGO</span></a>
+            <ul>
+                <li><a href="/#livre">Le Livre</a></li>
+                <li><a href="/#lecons">5 Leçons</a></li>
+                <li><a href="/analyses-war-room">Analyses</a></li>
+                <li><a href="/#auteur">À Propos</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <h1>Analyses War Room</h1>
+        <p class="subtitle">Décryptages stratégiques en temps réel sur les recompositions du pouvoir en Afrique</p>
     </div>
-    <div class="card-body">
-        <div class="status-badge status-published">PUBLIÉ</div>
-        <p class="card-description">Museveni, 81 ans, réélu pour un 7ème mandat. 71,65% des voix. 40 ans au pouvoir. Deux amendements constitutionnels taillés sur mesure. Résultat : un système qui ne peut plus fonctionner sans lui. L'antiloi parfaite de la <strong>Loi 40 : Construis des systèmes qui fonctionnent sans toi</strong>.</p>
-        <div class="card-meta">
-            <div class="meta-item">
-                <span class="meta-label">Publié</span>
-                <span>18 janvier 2026</span>
+    <div class="container">
+        <article class="article">
+            <div class="article-header">
+                <h1 class="article-title">Ouganda 2026 : L'Antiloi — Quand 40 Ans Ne Construisent Rien</h1>
+                <div class="article-meta">Analyse War Room #3 | 18 janvier 2026 | Par Stanislas Longo</div>
             </div>
-            <div class="meta-item">
-                <span class="meta-label">Doctrine</span>
-                <span>Loi 40 : Construis des systèmes qui fonctionnent sans toi</span>
+
+            <div class="section">
+                <h2>LE FAIT</h2>
+                <p>Le <strong>17 janvier 2026</strong>, la Commission électorale ougandaise proclame <strong>Yoweri Museveni</strong> vainqueur de l'élection présidentielle avec <strong>71,65% des voix</strong>. C'est son <strong>septième mandat consécutif</strong>. Il a <strong>81 ans</strong>. Il dirige l'Ouganda depuis <strong>1986</strong>, soit <strong>quarante années ininterrompues</strong> au pouvoir.</p>
+                <p>Sur le continent africain, seuls <strong>Teodoro Obiang en Guinée équatoriale</strong> (45 ans) et <strong>Paul Biya au Cameroun</strong> (43 ans) ont régné plus longtemps.</p>
+                <p>Le jour même du scrutin, <strong>Bobi Wine</strong>, principal opposant et figure de la jeunesse ougandaise (43 ans), est <strong>enlevé de son domicile par l'armée en hélicoptère</strong> et placé en détention. L'ONU dénonce un climat électoral "marqué par une <strong>répression et une intimidation généralisées</strong>". <strong>Internet est coupé</strong> pendant plusieurs jours.</p>
+                <p><strong>77% de la population ougandaise</strong> a moins de 40 ans. Ces Ougandais n'ont jamais connu d'autre président que Museveni. Pour eux, Museveni <strong>n'est pas un dirigeant : il est l'État lui-même</strong>.</p>
+                <p>Deux <strong>amendements constitutionnels</strong> successifs ont rendu cette longévité possible :</p>
+                <ul>
+                    <li><strong>2005</strong> : suppression de la limite de deux mandats présidentiels.</li>
+                    <li><strong>2017</strong> : suppression de la limite d'âge de 75 ans, spécifiquement pour permettre à Museveni de se représenter.</li>
+                </ul>
+                <p>Officiellement, l'Ouganda a tenu des élections.<br>En réalité, l'Ouganda a validé une <strong>dépendance biologique</strong> : le système politique ougandais ne peut plus fonctionner sans Museveni.</p>
+                <p>Et c'est précisément là que se situe le drame stratégique.</p>
             </div>
-            <div class="meta-item">
-                <span class="meta-label">Focus</span>
-                <span>Dépendance biologique, succession, effondrement structurel</span>
+
+            <div class="highlight-box">
+                <h3>L'ANGLE MORT : LOI 40 — CONSTRUIS DES SYSTÈMES QUI FONCTIONNENT SANS TOI</h3>
+                <p>Dans <em>Les 50 Lois du Pouvoir Contemporain — Manuel de Lucidité Stratégique pour les Bâtisseurs de l'Afrique Nouvelle</em>, la <strong>Loi 40</strong> pose une question que peu de dirigeants africains osent affronter :</p>
+                <blockquote>
+                    <strong>« Le sommet de ton pouvoir, c'est quand tu peux disparaître et que ça continue.<br>Si tout s'effondre quand tu disparais, tu n'as construit rien. Tu jouais un rôle. »</strong>
+                </blockquote>
+                <p>Museveni incarne <strong>l'antiloi parfaite</strong>.</p>
+                <p>Pendant <strong>quarante ans</strong>, il n'a pas construit un État autonome.<br>Il a construit un <strong>organisme dépendant de son propre métabolisme</strong>.</p>
+                <p>Les institutions ougandaises — Commission électorale, armée, justice, médias, banque centrale — ne sont plus des structures autonomes. Elles sont des <strong>extensions du corps de Museveni</strong>. Elles ne fonctionnent que <strong>par lui</strong>, <strong>pour lui</strong>, <strong>autour de lui</strong>.</p>
+                <p>Quand Museveni atteint 75 ans (limite constitutionnelle), on <strong>supprime la limite d'âge</strong>.<br>Quand il dépasse le nombre de mandats autorisés, on <strong>supprime la limite de mandats</strong>.<br>Les règles ne structurent plus l'État : elles <strong>épousent la biologie d'un homme</strong>.</p>
+                <p><strong>Ce que révèle l'Ouganda 2026</strong> :</p>
+                <ul>
+                    <li><strong>Les institutions ne survivront pas à Museveni</strong> : elles n'ont jamais été conçues pour fonctionner sans lui. Aucun mécanisme de succession crédible n'existe.</li>
+                    <li><strong>L'opposition ne combat pas un système, mais un organisme</strong> : arrêter Museveni ne changerait rien, car toute l'architecture politique s'est reconfigurée autour de sa présence physique. Le remplacer brutalement déclencherait un <strong>effondrement systémique</strong>.</li>
+                    <li><strong>77% de la population est otage d'un corps de 81 ans</strong> : la majorité démographique ougandaise n'a aucune prise institutionnelle, car les institutions ne répondent plus à la volonté populaire, mais au <strong>métabolisme du régime</strong>.</li>
+                </ul>
+                <p><strong>71,65%</strong> n'est pas un score électoral.<br>C'est un <strong>diagnostic médical</strong> : l'Ouganda est en soins intensifs, branché sur un corps de 81 ans dont la disparition entraînera un arrêt cardiaque institutionnel.</p>
             </div>
-        </div>
-        <a href="/analyses-war-room/ouganda-2026-antiloi" class="read-link">Lire l'analyse</a>
-    </div>
-</article>
+
+            <div class="section">
+                <h2>LA DATA : CE QUE LES CHIFFRES DISENT VRAIMENT</h2>
+
+                <h3>1) Museveni : 40 ans de règne, 0 an de structure autonome</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Année</th>
+                            <th>Événement stratégique</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1986</strong></td>
+                            <td>Prise du pouvoir après une guérilla armée.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2005</strong></td>
+                            <td>Amendement constitutionnel supprim
