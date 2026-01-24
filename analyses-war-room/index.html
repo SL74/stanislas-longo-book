@@ -160,25 +160,19 @@
         .card-meta {
             display: flex;
             flex-direction: column;
-            gap: 0.8rem;
+            gap: 1rem;
             margin-top: auto;
         }
         
         .meta-item {
             font-size: 0.85rem;
             color: #999;
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 1rem;
+            display: flex;
+            justify-content: space-between;
         }
         
         .meta-label {
             font-weight: 600;
-            text-align: left;
-        }
-        
-        .meta-value {
-            text-align: left;
         }
         
         .read-link {
@@ -278,10 +272,6 @@
             .card-title {
                 font-size: 1.2rem;
             }
-            
-            .meta-item {
-                grid-template-columns: 80px 1fr;
-            }
         }
     </style>
 </head>
@@ -306,7 +296,7 @@
 
     <div class="container">
         <div class="analyses-grid">
-            <!-- BRIEF #4 - CEMAC (le plus récent) -->
+            <!-- BRIEF #4 - CEMAC -->
             <article class="analysis-card">
                 <div class="card-header">
                     <div class="card-number">Analysis #4</div>
@@ -319,15 +309,15 @@
                     <div class="card-meta">
                         <div class="meta-item">
                             <span class="meta-label">Publié</span>
-                            <span class="meta-value">25 janvier 2026</span>
+                            <span>25 janvier 2026</span>
                         </div>
                         <div class="meta-item">
                             <span class="meta-label">Doctrine</span>
-                            <span class="meta-value">Loi 7 : Ne révèle jamais ton objectif final</span>
+                            <span>Loi 7 : Ne révèle jamais ton objectif final</span>
                         </div>
                         <div class="meta-item">
                             <span class="meta-label">Focus</span>
-                            <span class="meta-value">Crise monétaire, séquençage politique, structures de rente</span>
+                            <span>Crise monétaire, séquençage politique, structures de rente</span>
                         </div>
                     </div>
                     <a href="/analyses-war-room/cemac-2026-sommet-crise-monetaire" class="read-link">Lire l'analyse</a>
@@ -339,35 +329,35 @@
                 <div class="card-header">
                     <div class="card-number">Analysis #3</div>
                     <h2 class="card-title">Ouganda 2026 : L'Antiloi</h2>
-                    <p class="card-subtitle">Quand 40 ans de pouvoir ne construisent rien</p>
+                    <p class="card-subtitle">Quand 40 ans de pouvoir ne construisent rien — l'effondrement annoncé d'un système capturé par un corps</p>
                 </div>
                 <div class="card-body">
                     <div class="status-badge status-published">PUBLIÉ</div>
-                    <p class="card-description">Museveni, 81 ans, réélu pour un 7ème mandat avec 71,65% des voix. 40 ans au pouvoir. Deux amendements constitutionnels taillés sur mesure. Résultat : un système qui ne peut plus fonctionner sans lui. L'antiloi parfaite.</p>
+                    <p class="card-description">Museveni, 81 ans, réélu pour un 7ème mandat. 71,65% des voix. 40 ans au pouvoir. Deux amendements constitutionnels taillés sur mesure. Résultat : un système qui ne peut plus fonctionner sans lui. L'antiloi parfaite de la <strong>Loi 40 : Construis des systèmes qui fonctionnent sans toi</strong>.</p>
                     <div class="card-meta">
                         <div class="meta-item">
                             <span class="meta-label">Publié</span>
-                            <span class="meta-value">18 janvier 2026</span>
+                            <span>18 janvier 2026</span>
                         </div>
                         <div class="meta-item">
                             <span class="meta-label">Doctrine</span>
-                            <span class="meta-value">Loi 40 : Construis des systèmes qui fonctionnent sans toi</span>
+                            <span>Loi 40 : Construis des systèmes qui fonctionnent sans toi</span>
                         </div>
                         <div class="meta-item">
                             <span class="meta-label">Focus</span>
-                            <span class="meta-value">Dépendance biologique, succession, effondrement structurel</span>
+                            <span>Dépendance biologique, succession, effondrement structurel</span>
                         </div>
                     </div>
                     <a href="/analyses-war-room/ouganda-2026-antiloi" class="read-link">Lire l'analyse</a>
                 </div>
             </article>
 
-            <!-- BRIEF #2 - ÉLECTIONS 2026 -->
+            <!-- BRIEF #2 -->
             <article class="analysis-card">
                 <div class="card-header">
                     <div class="card-number">Analysis #2</div>
                     <h2 class="card-title">2026 : Les Élections comme Couverture de Guerre Économique</h2>
-                    <p class="card-subtitle">Quand les bulletins servent de décor à la bataille pour les minéraux critiques</p>
+                    <p class="card-subtitle">Quand les bulletins servent de décor à une bataille silencieuse pour les minéraux critiques africains</p>
                 </div>
                 <div class="card-body">
                     <div class="status-badge status-published">PUBLIÉ</div>
@@ -375,15 +365,15 @@
                     <div class="card-meta">
                         <div class="meta-item">
                             <span class="meta-label">Publié</span>
-                            <span class="meta-value">11 janvier 2026</span>
+                            <span>11 janvier 2026</span>
                         </div>
                         <div class="meta-item">
                             <span class="meta-label">Doctrine</span>
-                            <span class="meta-value">Loi 7 : Ne révèle jamais ton objectif final</span>
+                            <span>Loi 1 : Domine le récit avant la victoire</span>
                         </div>
                         <div class="meta-item">
                             <span class="meta-label">Focus</span>
-                            <span class="meta-value">Minéraux critiques, blocs régionaux, souveraineté par les flux</span>
+                            <span>Minéraux critiques, blocs régionaux, souveraineté par les flux</span>
                         </div>
                     </div>
                     <a href="/analyses-war-room/2026-elections-mineraux-critiques.html" class="read-link">Lire l'analyse</a>
@@ -394,4 +384,4 @@
             <article class="analysis-card">
                 <div class="card-header">
                     <div class="card-number">Analysis #1</div>
-                    <h2 class="card-title">Guinée : La
+                    
