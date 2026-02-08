@@ -1,1 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 – Le Club des Minéraux Critiques : Refuse le terrain qu’on te tend — Analyses War Room — Stanislas Longo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background-color: #0a0a0a; color: #f5f5f5; line-height: 1.6; }
+        header { background-color: #000; padding: 1.5rem 2rem; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2rem; font-weight: 700; color: #f5f5f5; text-decoration: none; letter-spacing: 0.05em; }
+        .logo span { color: #c9a961; }
+        nav ul { display: flex; gap: 2rem; list-style: none; }
+        nav a { color: #f5f5f5; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        nav a:hover { color: #c9a961; }
+        .hero { max-width: 900px; margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+        .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; font-family: Georgia, serif; }
+        .hero .subtitle { font-size: 1.1rem; color: #999; margin-bottom: 2rem; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .article { background-color: #111; border: 1px solid #222; border-radius: 8px; padding: 3rem; margin-bottom: 2rem; }
+        .article-header { border-bottom: 2px solid #c9a961; padding-bottom: 1.5rem; margin-bottom: 2rem; }
+        .article-title { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; font-family: Georgia, serif; }
+        .article-meta { color: #999; font-size: 0.9rem; }
+        .section { margin-bottom: 2.5rem; }
+        .section h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #c9a961; font-weight: 600; }
+        .section h3 { font-size: 1.2rem; margin-bottom: 0.8rem; margin-top: 1.5rem; font-weight: 600; }
+        .section p { margin-bottom: 1rem; color: #ddd; }
+        .section ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+        .section li { margin-bottom: 0.5rem; color: #ddd; }
+        .section table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        .section th, .section td { padding: 0.8rem; border: 1px solid #333; text-align: left; }
+        .section th { background-color: #1a1a1a; color: #c9a961; font-weight: 600; }
+        .section td { background-color: #0a0a0a; }
+        .highlight-box { background-color: #1a1a1a; border-left: 4px solid #c9a961; padding: 1.5rem; margin: 2rem 0; }
+        .highlight-box h3 { color: #c9a961; margin-top: 0; }
+        .highlight-box blockquote { font-style: italic; color: #ddd; margin: 1rem 0; padding-left: 1rem; border-left: 2px solid #666; }
+        .warning-box { background-color: #1a1a00; border-left: 4px solid #c9a961; padding: 1.5rem; margin: 2rem 0; }
+        .warning-box h3 { color: #c9a961; margin-top: 0; font-size: 1.1rem; }
+        .source { font-size: 0.85rem; color: #666; font-style: italic; margin-top: 0.5rem; }
+        .share-section { border-top: 1px solid #333; padding-top: 2rem; margin-top: 3rem; }
+        .share-section h3 { color: #c9a961; font-size: 1.1rem; margin-bottom: 1rem; }
+        .share-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .share-btn { padding: 0.7rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; display: inline-block; color: #fff; }
+        .share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        .btn-twitter { background-color: #1DA1F2; }
+        .btn-linkedin { background-color: #0077B5; }
+        .btn-whatsapp { background-color: #25D366; }
+        .btn-email { background-color: #666; }
+        .cta-box { background-color: #c9a961; color: #000; padding: 2rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
+        .cta-box h3 { margin-bottom: 1rem; font-size: 1.5rem; }
+        .cta-box p { color: #000; }
+        .btn { display: inline-block; background-color: #000; color: #c9a961; padding: 0.8rem 2rem; text-decoration: none; border-radius: 4px; font-weight: 600; transition: all 0.3s; }
+        .btn:hover { background-color: #111; transform: translateY(-2px); }
+        footer { background-color: #000; padding: 3rem 2rem; border-top: 1px solid #222; text-align: center; }
+        footer p { color: #666; font-size: 0.9rem; }
+        footer a { color: #c9a961; text-decoration: none; }
+        .article-image { margin-bottom: 2rem; }
+        .article-image img { width: 100%; border-radius: 4px; border: 1px solid #333; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .article { padding: 2rem 1.5rem; }
+            nav ul { gap: 1rem; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">STANISLAS <span>LONGO</span></a>
+            <ul>
+                <li><a href="/#livre">Le Livre</a></li>
+                <li><a href="/#lecons">5 Leçons</a></li>
+                <li><a href="/analyses-war-room">Analyses</a></li>
+                <li><a href="/#auteur">À Propos</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Analyses War Room</h1>
+        <p class="subtitle">Décryptages stratégiques en temps réel sur les recompositions du pouvoir en Afrique</p>
+    </div>
+
+    <div class="container">
+        <article class="article">
+            <div class="article-header">
+                <h1 class="article-title">2026 – Le Club des Minéraux Critiques : Refuse le terrain qu’on te tend</h1>
+                <div class="article-meta">Analyse War Room #6 | 08 février 2026 | Par Stanislas Longo</div>
+            </div>
+
+            <div class="article-image">
+                <img src="images/2026-critical-minerals-ministerial-press.jpg"
+                     alt="Critical Minerals Ministerial 2026 – conférence de presse au Département d’État américain"
+                     loading="lazy" />
+                <p class="source">
+                    Source : U.S. Department of State, « Secretary Rubio Holds Press Availability at Critical Minerals Ministerial », 4 février 2026 (domaine public, via Flickr). [web:228]
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>LE FAIT BRUT</h2>
+                <p>
+                    Le <strong>4 février 2026</strong>, Washington tient le <strong>Critical Minerals Ministerial</strong>, en présence de plus de cinquante pays et d’organisations partenaires, pour bâtir un <strong>bloc minéral</strong> destiné à sécuriser l’accès aux minéraux critiques (cobalt, cuivre, lithium, nickel, terres rares) et à réduire la dépendance à la Chine. [web:171][web:173][web:198]
+                </p>
+                <p>
+                    Dans ce cadre, les États‑Unis annoncent de nouveaux engagements&nbsp;: <strong>11 accords ou cadres bilatéraux</strong> signés pour soutenir la prospection, l’extraction, le raffinage et le recyclage, ainsi que des instruments visant à stabiliser le marché – mécanismes tarifaires, garanties publiques, coordination des politiques de stock. [web:171][web:188][web:195]
+                </p>
+                <p>
+                    En parallèle, la Banque d’Export‑Import américaine approuve <strong>Project Vault</strong>, une réserve stratégique de minéraux critiques dotée d’environ <strong>10&nbsp;milliards de dollars</strong> de financements publics, avec un objectif d’environ <strong>12&nbsp;milliards de dollars</strong> en combinant capitaux privés. [web:193][web:196][web:199]
+                    Officiellement, il s’agit de «&nbsp;renforcer la résilience des chaînes d’approvisionnement&nbsp;» et de «&nbsp;favoriser le développement durable chez les partenaires&nbsp;». [web:171][web:188]
+                </p>
+                <p>
+                    Ce sommet intervient alors que l’architecture de sécurité occidentale est en crise&nbsp;: l’OTAN est décrite comme en «&nbsp;état de mort cérébrale&nbsp;» ou comme un «&nbsp;tigre de papier&nbsp;», l’Europe se réarme dans l’urgence, les États‑Unis réclament jusqu’à <strong>5&nbsp;% du PIB</strong> de dépenses militaires et la cohésion politique se fissure. [file:200]
+                    Les guerres d’intervention (Irak, Afghanistan, Libye) ont coûté des milliers de milliards de dollars sans produire d’ordres stables, poussant les grandes puissances à privilégier désormais les <strong>guerres de flux</strong> (sanctions, corridors, normes, blocs commerciaux) plutôt que les guerres de terrain. [file:201]
+                </p>
+                <p>
+                    L’Afrique se retrouve au centre de cette nouvelle architecture&nbsp;: les blocs occidentaux cherchent à sécuriser ses minéraux via un <strong>club</strong>, les anciennes garanties militaires sont fragilisées et la pression se déplace vers l’économie, le droit, la logistique et la norme. [web:171][web:173][file:200][file:201]
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>LA LOI APPLICABLE : LOI 4 — NE COMBATS JAMAIS SUR UN TERRAIN QUE TU N’AS PAS CHOISI</h3>
+                <p>
+                    Dans <em>Les 50 Lois du Pouvoir Contemporain</em>, la <strong>Loi 4</strong> rappelle que toute bataille perdue commence sur un terrain imposé&nbsp;: accepter les règles, le tempo et l’arène définis par d’autres revient souvent à entériner sa propre défaite stratégique. [file:185]
+                </p>
+                <p>
+                    Appliquée au club des minéraux critiques, cette loi pose une question centrale à l’Afrique&nbsp;: veut‑elle se battre sur le terrain des <strong>sanctions, standards de compliance, prix‑planchers et corridors clés en main</strong> que les blocs lui proposent, ou préfèrera‑t‑elle déplacer la bataille vers des terrains qu’elle contrôle réellement&nbsp;? [web:171][web:173][web:181][web:183]
+                </p>
+                <blockquote>
+                    <strong>Le pouvoir ne consiste pas à gagner sur le terrain de l’autre, mais à forcer l’autre à traiter sur un terrain que tu as toi‑même dessiné.</strong>
+                </blockquote>
+            </div>
+
+            <div class="section">
+                <h2>LES TERRAINS QU’ON TE PROPOSE</h2>
+
+                <h3>1) Terrain sécuritaire : la dépendance comme héritage</h3>
+                <p>
+                    Pendant des décennies, une partie de l’Europe a vécu sous une garantie de sécurité externalisée, au prix d’un sous‑investissement militaire et d’une dépendance industrielle profonde. [file:200]
+                    Aujourd’hui, cette architecture se fissure&nbsp;: la garantie automatique de défense est publiquement mise en doute, les budgets militaires doivent exploser pour satisfaire les nouvelles exigences et chaque capitale redécouvre ses intérêts propres. [file:200]
+                </p>
+                <p>
+                    Pour l’Afrique, cela signifie deux choses&nbsp;: les Européens ont besoin de <strong>minéraux critiques</strong> pour leur réarmement et leurs industries d’armement, et les États‑Unis cherchent de nouveaux leviers de contrôle sur l’Europe et la Chine via les minéraux, l’IA, les semi‑conducteurs et les terres rares. [file:200][web:173][web:175]
+                </p>
+                <p>
+                    Le terrain sécuritaire qui se profile est piégé&nbsp;: d’un côté, on propose des arrangements militaires et de formation comme condition implicite d’accès aux clubs économiques&nbsp;; de l’autre, tout manquement peut être «&nbsp;sanctionné&nbsp;» sur le terrain économique ou normatif.
+                    Dans tous les cas, le cadre reste calibré par d’autres. [file:200][web:173]
+                </p>
+
+                <h3>2) Terrain normatif et financier : sanctions, compliance et moralisation asymétrique</h3>
+                <p>
+                    Les sanctions contemporaines fonctionnent comme une architecture d’étranglement&nbsp;: interdiction de vendre, d’acheter, de transporter, de payer, sous prétexte de sécurité, de prolifération ou de droits humains. [file:201]
+                    Elles frappent d’abord les sociétés, bien avant les régimes, et peuvent durer des décennies. [file:201]
+                </p>
+                <p>
+                    Transposé aux minéraux critiques, ce schéma permet de conditionner l’accès aux marchés à des <strong>standards ESG et de traçabilité</strong> écrits ailleurs, avec le risque de voir certains États africains classés «&nbsp;non coopératifs&nbsp;» et donc exclus de facto du jeu par la finance, l’assurance ou le droit commercial. [web:171][web:181][web:188]
+                </p>
+                <p>
+                    Le terrain proposé est clair&nbsp;: «&nbsp;Tu peux vendre tes minéraux si tu respectes nos standards, nos systèmes de traçabilité, nos audits, nos tribunaux, nos décisions politiques – sinon, tu sors du jeu.&nbsp;»
+                    La bataille n’est alors plus «&nbsp;qui est le plus vertueux&nbsp;», mais <strong>qui définit la vertu</strong> et qui contrôle les instruments de sa vérification. [web:181][web:205]
+                </p>
+
+                <h3>3) Terrain logistique : corridors conçus ailleurs</h3>
+                <p>
+                    Les détroits, ports et corridors sont devenus des leviers de puissance&nbsp;: celui qui peut les fermer, les réorienter ou les saturer influence l’économie mondiale sans tirer un seul coup de feu. [file:201]
+                    En Afrique, des projets comme le <strong>Lobito Corridor</strong> (Angola–RDC–Zambie vers l’Atlantique) sont présentés comme des solutions de diversification logistique, soutenus par l’UE, les États‑Unis et plusieurs bailleurs. [web:183][web:194]
+                </p>
+                <p>
+                    La promesse est de réduire les temps de transit, de connecter la Copperbelt aux grands marchés et de favoriser la transformation locale, mais le risque structurel est de voir se constituer des <strong>goulots logistiques</strong> où contrats de transport, priorités de trafic et décisions stratégiques sont largement définis par des intérêts extérieurs. [web:183][web:181]
+                </p>
+                <p>
+                    Sur ce terrain, l’Afrique est invitée à négocier projet par projet, tronçon par tronçon, sans maîtriser la logique d’ensemble qui relie ces infrastructures entre elles. [web:183][web:194]
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>LES TERRAINS QUE TU DOIS IMPOSER</h2>
+
+                <h3>1) Corridors africains : du projet au dispositif de souveraineté</h3>
+                <p>
+                    Appliquer la Loi&nbsp;4, c’est refuser de se battre sur le terrain de «&nbsp;qui finance le plus vite&nbsp;» ou de «&nbsp;qui offre le plus de dons&nbsp;» et imposer celui de la <strong>gouvernance des corridors</strong>&nbsp;:
+                    co‑propriété africaine des sociétés de gestion (rails, ports, pipelines) avec de vrais droits de veto, priorisation contractuelle de flux africains (agriculture, commerce intra‑africain, projets industriels) et exigence d’infrastructures de données souveraines sur les flux. [file:185][web:183][web:181][web:184]
+                </p>
+                <p>
+                    Terrain choisi&nbsp;: «&nbsp;Nous ne négocierons pas seulement un projet d’infrastructure, mais une architecture de corridors dont nous définissons la logique d’usage.&nbsp;»
+                </p>
+
+                <h3>2) Normes co‑écrites : de la compliance subie à la souveraineté normative partagée</h3>
+                <p>
+                    Les marchés exigeront toujours davantage de traçabilité, de transparence ESG et de preuves de “responsible sourcing”. [web:171][web:175][web:181]
+                    L’enjeu n’est pas de refuser ces exigences, mais de refuser qu’elles soient écrites sans l’Afrique. [web:181]
+                </p>
+                <p>
+                    Cela implique de créer des <strong>plateformes africaines de traçabilité et de certification</strong> gouvernées depuis le continent, d’inscrire l’Afrique comme <strong>co‑auteur</strong> des standards internationaux dans les forums ad hoc et de conditionner l’accès aux gisements à la <strong>reconnaissance mutuelle</strong> de ces systèmes comme équivalents aux systèmes occidentaux ou asiatiques. [web:181][web:184][web:205]
+                </p>
+                <p>
+                    La question devient alors&nbsp;: «&nbsp;Nos règles respectives sont‑elles reconnues comme condition d’accès à nos marchés respectifs&nbsp;?&nbsp;» plutôt que «&nbsp;Sommes‑nous conformes aux vôtres&nbsp;?&nbsp;».
+                </p>
+
+                <h3>3) Réserves et prix : co‑architecte de la stabilité</h3>
+                <p>
+                    Project Vault, avec ses 10–12&nbsp;milliards de dollars, signale que la souveraineté passe désormais aussi par des <strong>stocks stratégiques</strong> et des mécanismes de prix, pas seulement par des alliances militaires. [web:193][web:196][web:173]
+                </p>
+                <p>
+                    Le terrain africain à construire suppose la mise en place de <strong>stockpiles régionaux</strong> de minéraux critiques (via banques régionales, fonds souverains, Afreximbank), la négociation de contrats intégrant des mécanismes de co‑gestion du prix (planchers, bandes de fluctuation, formules indexées) et la participation active aux instances du club qui définiront prix de référence et seuils d’intervention. [web:145][web:184][web:173][web:177][web:171][web:188]
+                </p>
+                <p>
+                    L’objectif est de passer du statut de «&nbsp;fournisseur exposé à la volatilité&nbsp;» à celui de <strong>co‑gardien de la stabilité</strong> d’un marché central pour la transition énergétique mondiale. [web:204][web:210]
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>SIGNAUX IGNORÉS ET ANTILOI</h2>
+                <ul>
+                    <li>
+                        <strong>Signal&nbsp;#1 – L’héritage de la dépendance militaire</strong> :
+                        le continent européen découvre, après des décennies, le coût d’avoir laissé sa sécurité dépendre d’une architecture conçue ailleurs. [file:200]
+                        Si l’Afrique laisse ses flux minéraux dépendre d’architectures externes (corridors, stockpiles, normes), elle reproduira la même trajectoire.
+                    </li>
+                    <li>
+                        <strong>Signal&nbsp;#2 – L’effet réel des sanctions</strong> :
+                        les sanctions prolongées étranglent d’abord les sociétés, pas les régimes, et servent souvent de prétexte à des «&nbsp;accords alibis&nbsp;» qui permettent à tous de sauver la face sans changer la structure. [file:201]
+                        Attendre d’être sous sanction pour penser des alternatives logistiques, financières ou normatives serait une erreur stratégique majeure.
+                    </li>
+                    <li>
+                        <strong>Antiloi de la Loi&nbsp;4</strong> :
+                        «&nbsp;Celui qui accepte tous les terrains se condamne à perdre partout.&nbsp;»
+                        Accepter sans condition les cadres sécuritaires externes, les standards importés et les corridors conçus sans toi, c’est se battre dans des arènes où tu es structurellement désavantagé. [file:185][web:171][web:173]
+                    </li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>LE CHIFFRE QUI TUE</h3>
+                <p style="font-size: 3rem; font-weight: 700; color: #c9a961; text-align: center; margin: 1.5rem 0;">
+                    10&nbsp;000&nbsp;000&nbsp;000
+                </p>
+                <p>
+                    C’est la dotation initiale de <strong>Project Vault</strong>, la réserve stratégique américaine de minéraux critiques. [web:193][web:196]
+                </p>
+                <p>
+                    Ce chiffre révèle le vrai terrain que les États‑Unis ont choisi&nbsp;: déplacer une partie de leur puissance de l’OTAN vers
+                    <strong>des entrepôts, des contrats long terme et des algorithmes de prix</strong>, et investir dans la capacité de piloter des flux dont une partie majeure viendra du sous‑sol africain. [web:193][web:196][web:173]
+                </p>
+                <p>
+                    Tant que l’Afrique ne se dote pas, elle aussi, de mécanismes de stock, de régulation de prix et de gouvernance de corridors, elle ne choisira pas le terrain&nbsp;; elle sera invitée à s’y adapter. [web:204][web:211]
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>CHUTE</h2>
+                <p>
+                    Le 4 février 2026, Washington n’a pas seulement organisé un sommet sur les minéraux critiques&nbsp;; il a <strong>dessiné un terrain</strong>&nbsp;: celui d’un club où les règles, les prix, les corridors et les sanctions sont largement pensés par ceux qui veulent sécuriser leur transition et leurs industries. [web:171][web:173][web:188]
+                </p>
+                <p>
+                    La Loi&nbsp;4 rappelle une chose simple&nbsp;: <strong>on ne gagne pas une guerre sur un champ de bataille que l’adversaire a dessiné pour soi</strong>. [file:185]
+                    L’Afrique n’a pas besoin de refuser le club&nbsp;; elle doit refuser d’y entrer comme simple fournisseur discipliné.
+                </p>
+                <p>
+                    Les vraies batailles se joueront ailleurs&nbsp;: dans la conception de ses corridors, dans la co‑écriture de ses normes, dans la constitution de ses réserves et dans la capacité à dire, sans geste inutile&nbsp;:
+                    «&nbsp;Nous pouvons vivre sans votre club, mais vous ne pouvez pas stabiliser vos transitions sans nos flux.&nbsp;»
+                </p>
+                <p>
+                    Le jour où ces terrains‑là seront imposés, le club des minéraux critiques cessera d’être une scène de domestication pour devenir ce qu’il devrait être&nbsp;:
+                    <strong>un espace de négociation entre architectes de souveraineté</strong>.
+                </p>
+            </div>
+
+            <div class="warning-box">
+                <h3>LIMITES DE L'ANALYSE</h3>
+                <p>
+                    <strong>Dynamique encore fluide du club minéral.</strong>
+                    Le Critical Minerals Ministerial ouvre un chantier, il ne le clôt pas&nbsp;: gouvernance du bloc, clauses détaillées des 11 accords, articulation avec d’autres cadres (G7, G20, accords bilatéraux) restent en construction. [web:171][web:195][web:202][web:205]
+                    Les scénarios présentés ici sont donc structurels, pas prédictifs point par point.
+                </p>
+                <p>
+                    <strong>Project Vault : taille réelle vs effet symbolique.</strong>
+                    Les 10–12&nbsp;milliards annoncés peuvent ne couvrir que quelques mois de consommation pour certains matériaux, et leur efficacité dépendra de la discipline politique américaine et des conditions de marché. [web:193][web:196][web:206][web:210][web:214]
+                </p>
+                <p>
+                    <strong>Hétérogénéité des cas africains.</strong>
+                    Tous les pays ne sont pas dans la même situation vis‑à‑vis des minéraux critiques&nbsp;: producteurs clés, corridors, États surtout concernés par les normes et la finance. [web:142][web:204]
+                    Chaque gouvernement devra adapter ces principes à ses propres contraintes politiques, budgétaires et institutionnelles.
+                </p>
+                <p>
+                    <strong>Incertitudes sur les réactions chinoises et européennes.</strong>
+                    La Chine peut riposter via ses propres contrôles d’exportation ou blocs Sud‑Sud, et l’Europe peut chercher à se repositionner avec ses propres réserves et cadres de standards. [web:206][web:208][web:213][web:142][web:175][web:204][web:205]
+                </p>
+                <p>
+                    <strong>Biais assumé : priorité à l’angle africain.</strong>
+                    La focale choisie est afro‑centrée&nbsp;: la question n’est pas «&nbsp;Project Vault est‑il optimal pour les États‑Unis&nbsp;?&nbsp;», mais «&nbsp;Quels terrains l’Afrique doit‑elle refuser ou créer&nbsp;?&nbsp;». [cite:4][cite:6]
+                </p>
+                <p>
+                    <strong>Temporalité des flux vs cycles politiques.</strong>
+                    Les corridors, plateformes de données et stockpiles demandent 5 à 15 ans pour se matérialiser, alors que les cycles politiques sont plus courts, ce qui pose un problème de continuité stratégique. [web:204][web:206][web:209]
+                </p>
+                <p style="margin-top: 1rem;">
+                    <em>
+                        Les données de cette analyse sont issues de sources publiques vérifiables (Département d’État américain, EXIM Bank, analyses spécialisées sur les minéraux critiques, travaux sur l’OTAN et les sanctions).
+                        Les interprétations, scénarios et recommandations n’engagent que leur auteur. [web:171][web:193][web:202][web:210]
+                    </em>
+                </p>
+            </div>
+        </article>
+
+        <div class="share-section">
+            <h3>Partager cette analyse</h3>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text=2026%20%E2%80%93%20Le%20Club%20des%20Min%C3%A9raux%20Critiques%20:%20Refuse%20le%20terrain%20qu%E2%80%99on%20te%20tend&url=https://www.stanislas-longo.com/analyses-war-room/2026-club-mineraux-critiques.html"
+                   target="_blank" class="share-btn btn-twitter">
+                    Twitter
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.stanislas-longo.com/analyses-war-room/2026-club-mineraux-critiques.html"
+                   target="_blank" class="share-btn btn-linkedin">
+                    LinkedIn
+                </a>
+                <a href="https://wa.me/?text=2026%20%E2%80%93%20Le%20Club%20des%20Min%C3%A9raux%20Critiques%20:%20Analyse%20War%20Room%20-%20https://www.stanislas-longo.com/analyses-war-room/2026-club-mineraux-critiques.html"
+                   target="_blank" class="share-btn btn-whatsapp">
+                    WhatsApp
+                </a>
+                <a href="mailto:?subject=2026%20%E2%80%93%20Le%20Club%20des%20Min%C3%A9raux%20Critiques%20:%20Analyse%20War%20Room&body=Je%20partage%20cette%20analyse%20:%20https://www.stanislas-longo.com/analyses-war-room/2026-club-mineraux-critiques.html"
+                   class="share-btn btn-email">
+                    Email
+                </a>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h3>Découvrir l'univers des 50 Lois</h3>
+            <p style="margin-bottom: 1.5rem;">
+                Cette analyse illustre la <strong>Loi 4 : Ne combats jamais sur un terrain que tu n’as pas choisi</strong>, l’une des 50 lois du pouvoir contemporain en Afrique. [file:185][cite:244]
+            </p>
+            <p style="margin-bottom: 1.5rem;"><strong>Parution prévue : Printemps 2026</strong></p>
+            <a href="/#livre" class="btn">Explorer Les 50 Lois du Pouvoir Contemporain</a>
+        </div>
+
+        <div style="text-align: center; padding: 2rem 0; color: #999; border-top: 1px solid #222; margin-top: 3rem;">
+            <p><strong>Autres Analyses War Room</strong></p>
+            <p style="margin-top: 1rem;">
+                <a href="/analyses-war-room/nigeria-2026-barter-souverain" style="color: #c9a961; text-decoration: none;">
+                    Nigeria 2026 : Rembourser sa Dette en Flux Physiques (Analyse #5)
+                </a>
+            </p>
+            <p style="margin-top: 0.5rem;">
+                <a href="/analyses-war-room/cemac-2026-sommet-crise-monetaire" style="color: #c9a961; text-decoration: none;">
+                    CEMAC 2026 : Le Sommet de la Dernière Chance (Analyse #4)
+                </a>
+            </p>
+            <p style="margin-top: 0.5rem;">
+                <a href="/analyses-war-room/ouganda-2026-antiloi" style="color: #c9a961; text-decoration: none;">
+                    Ouganda 2026 : L'Antiloi (Analyse #3)
+                </a>
+            </p>
+            <p style="margin-top: 0.5rem;">
+                <a href="/analyses-war-room/2026-elections-mineraux-critiques.html" style="color: #c9a961; text-decoration: none;">
+                    2026 : Élections et Guerre Économique (Analyse #2)
+                </a>
+            </p>
+            <p style="margin-top: 0.5rem;">
+                <a href="/analyses-war-room/guinee-vacance-du-reel" style="color: #c9a961; text-decoration: none;">
+                    Guinée : La Vacance du Réel (Analyse #1)
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Stanislas Longo. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="https://www.linkedin.com/in/stanislas-longo-mba-631a1130">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
 
