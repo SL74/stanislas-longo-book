@@ -58,28 +58,42 @@
             color: #bbb; 
         }
         
-        /* Styles pour les images */
-        .article-image { 
-            margin: 30px 0; 
-            border: 1px solid #222; 
-            border-radius: 8px; 
-            overflow: hidden; 
-        }
-        
-        .article-image img { 
-            width: 100%; 
-            display: block; 
-            height: auto; 
-        }
-        
-        .source { 
-            font-size: 0.85rem; 
-            color: #666; 
-            font-style: italic; 
-            margin-top: 8px; 
-            padding: 10px 15px; 
-            background-color: #0a0a0a; 
-        }
+/* Styles pour les images */
+.article-image { 
+    margin: 30px 0; 
+    border: 1px solid #222; 
+    border-radius: 8px; 
+    overflow: hidden;
+    max-width: 100%;  /* S'adapte au conteneur */
+}
+
+.article-image img { 
+    width: 100%; 
+    max-width: 700px;  /* AJOUTÉ : Limite la largeur maximale */
+    height: auto; 
+    display: block;
+    margin: 0 auto;  /* AJOUTÉ : Centre l'image */
+}
+
+/* Image logo (plus petite) */
+.article-image.logo-image img {
+    max-width: 500px;  /* Logo plus petit que infographie */
+}
+
+/* Image infographie (taille moyenne) */
+.article-image.infographic-image img {
+    max-width: 750px;  /* Infographie légèrement plus grande */
+}
+
+.source { 
+    font-size: 0.85rem; 
+    color: #666; 
+    font-style: italic; 
+    margin-top: 8px; 
+    padding: 10px 15px; 
+    background-color: #0a0a0a;
+    text-align: center;  /* AJOUTÉ : Centre la source */
+}
         
         section { 
             margin-bottom: 60px; 
@@ -315,11 +329,11 @@
             <p class="author">Par Stanislas Longo</p>
         </header>
 
-        <!-- Logo Eskom -->
-<img src="/analyses-war-room/images/eskom-logo-building.jpg" alt="Logo Eskom sur bâtiment en Afrique du Sud" loading="lazy">
-            <p class="source">Source : Bloomberg</p>
-        </div>
-
+        <!-- LOGO ESKOM (PLUS PETIT) -->
+<div class="article-image logo-image">
+    <img src="/analyses-war-room/images/eskom-logo-building.jpg" alt="Logo Eskom sur bâtiment en Afrique du Sud" loading="lazy">
+    <p class="source">Source : Bloomberg</p>
+</div>
         <section>
             <h2>Le Fait</h2>
             <p>Le <strong>6 février 2026</strong>, Eskom — le géant électrique sud-africain qui contrôle 95% de l'électricité du pays — a annoncé un retour au <strong>delestage de stade 4</strong> pour les deux prochains mois. Cela signifie <strong>4 heures de coupures quotidiennes</strong> pour des millions de foyers et d'entreprises.</p>
@@ -551,11 +565,11 @@
             
             <p><strong>Observation</strong> : Eskom est le monopole le plus coûteux (en % du PIB), le plus défaillant (delestages record), mais aussi le plus irremplaçable (95% de dépendance nationale).</p>
             
-            <!-- INFOGRAPHIE COMPARATIVE MONOPOLE VS MARCHÉ -->
-            <div class="article-image" style="margin-top: 50px;">
-               <img src="/analyses-war-room/images/eskom-monopole-vs-marche-infographie.jpg" alt="Infographie comparative : Monopole Intégré (1923-2026) vs Marché Ouvert (2026+)" loading="lazy">
-                <p class="source">Infographie : Eskom Monopole vs Marché — Transition vers la sécurité énergétique et la croissance</p>
-            </div>
+          <!-- INFOGRAPHIE COMPARATIVE (TAILLE MOYENNE) -->
+<div class="article-image infographic-image" style="margin-top: 50px;">
+    <img src="/analyses-war-room/images/eskom-monopole-vs-marche-infographie.jpg" alt="Infographie comparative : Monopole Intégré (1923-2026) vs Marché Ouvert (2026+)" loading="lazy">
+    <p class="source">Infographie : Eskom Monopole vs Marché — Transition vers la sécurité énergétique et la croissance</p>
+</div>
             
             <h3>4. Coût économique réel des delestages</h3>
             
