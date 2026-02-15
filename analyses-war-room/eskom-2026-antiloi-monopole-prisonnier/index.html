@@ -158,7 +158,7 @@
             font-weight: 500; 
         }
         
-            .share-section { 
+        .share-section { 
             margin-top: 60px; 
             padding-top: 40px; 
             border-top: 2px solid #222; 
@@ -178,22 +178,37 @@
         
         .share-btn { 
             padding: 12px 24px; 
-            background-color: #c9a961;  /* CHANGÉ : or au lieu de noir */
-            color: #0a0a0a;  /* CHANGÉ : noir au lieu de blanc */
             text-decoration: none; 
-            border: 1px solid #c9a961;  /* CHANGÉ : or au lieu de gris */
             border-radius: 4px; 
             font-size: 0.9rem;
-            font-weight: 600;  /* AJOUTÉ : pour cohérence */
-            transition: all 0.3s; 
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            color: #fff;  /* Texte blanc pour tous */
         }
         
         .share-btn:hover { 
-            background-color: #d4b976;  /* CHANGÉ : or plus clair */
-            color: #0a0a0a; 
-            border-color: #d4b976;  /* CHANGÉ : or clair */
-            transform: translateY(-2px);  /* AJOUTÉ : effet hover élégant */
+            transform: translateY(-2px); 
+            opacity: 0.9; 
         }
+        
+        /* Couleurs spécifiques par réseau social */
+        .btn-twitter { 
+            background-color: #1DA1F2; 
+        }
+        
+        .btn-linkedin { 
+            background-color: #0077B5; 
+        }
+        
+        .btn-whatsapp { 
+            background-color: #25D366; 
+        }
+        
+        .btn-email { 
+            background-color: #666; 
+        }
+
         
         .book-cta { 
             background-color: #1a1a1a; 
@@ -763,13 +778,25 @@
             <p>Ce n'est pas une prescription politique. C'est une grille de lecture pour décideurs et observateurs qui doivent anticiper si le <strong>monopole prisonnier</strong> peut être libéré, ou s'il doit être démantelé.</p>
         </div>
 
-        <div class="share-section">
+               <div class="share-section">
             <h3>Partager cette analyse</h3>
             <div class="share-buttons">
-                <a href="https://twitter.com/intent/tweet?text=Eskom%202026%20%3A%20L%27Antiloi%20du%20Monopole%20Prisonnier&url=https://stanislas-longo-book.vercel.app/analyses-war-room/eskom-2026-antiloi-monopole-prisonnier" class="share-btn" target="_blank">Twitter</a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://stanislas-longo-book.vercel.app/analyses-war-room/eskom-2026-antiloi-monopole-prisonnier" class="share-btn" target="_blank">LinkedIn</a>
-                <a href="https://wa.me/?text=Eskom%202026%20%3A%20Analyse%20strat%C3%A9gique%20-%20https://stanislas-longo-book.vercel.app/analyses-war-room/eskom-2026-antiloi-monopole-prisonnier" class="share-btn" target="_blank">WhatsApp</a>
-                <a href="mailto:?subject=Eskom%202026%20%3A%20Analyse%20War%20Room&body=Je%20partage%20cette%20analyse%20%3A%20https://stanislas-longo-book.vercel.app/analyses-war-room/eskom-2026-antiloi-monopole-prisonnier" class="share-btn">Email</a>
+                <a href="https://twitter.com/intent/tweet?text=Eskom%202026%20%3A%20L%27Antiloi%20du%20Monopole%20Prisonnier&url=https://stanislas-longo-book.vercel.app/analyses-war-room/eskom-2026-antiloi-monopole-prisonnier" 
+                   class="share-btn btn-twitter" target="_blank">
+                    Twitter
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://stanislas-longo-book.vercel.app/analyses-war-room/eskom-2026-antiloi-monopole-prisonnier" 
+                   class="share-btn btn-linkedin" target="_blank">
+                    LinkedIn
+                </a>
+                <a href="https://wa.me/?text=Eskom%202026%20%3A%20Analyse%20strat%C3%A9gique%20-%20https://stanislas-longo-book.vercel.app/analyses-war-room/eskom-2026-antiloi-monopole-prisonnier" 
+                   class="share-btn btn-whatsapp" target="_blank">
+                    WhatsApp
+                </a>
+                <a href="mailto:?subject=Eskom%202026%20%3A%20Analyse%20War%20Room&body=Je%20partage%20cette%20analyse%20%3A%20https://stanislas-longo-book.vercel.app/analyses-war-room/eskom-2026-antiloi-monopole-prisonnier" 
+                   class="share-btn btn-email">
+                    Email
+                </a>
             </div>
         </div>
 
