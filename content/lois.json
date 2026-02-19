@@ -1,0 +1,93 @@
+{
+  "lois": [
+    {
+      "id": 1,
+      "titre": "Domine le récit avant la victoire",
+      "mantra": "Celui qui écrit l'histoire finit par commander aux faits.",
+      "partie": 1,
+      "tag": "Récit"
+    },
+    {
+      "id": 2,
+      "titre": "Deviens utile avant d'être visible",
+      "mantra": "Le pouvoir durable attire avant de s'annoncer.",
+      "partie": 1,
+      "tag": "Utilité"
+    },
+    {
+      "id": 3,
+      "titre": "Sois lisible sans être dcodable",
+      "mantra": "Ce qui est trop lisible devient vulnérable.",
+      "partie": 1,
+      "tag": "Opacité"
+    },
+    {
+      "id": 4,
+      "titre": "Ne combats jamais sur un terrain que tu n’as pas choisi",
+      "mantra": "Toute bataille perdue commence sur un terrain imposé.",
+      "partie": 1,
+      "tag": "Terrain"
+    },
+    {
+      "id": 8,
+      "titre": "Impose ton calme comme hiérarchie naturelle",
+      "mantra": "Dans le chaos, celui qui reste stable devient centre de gravité.",
+      "partie": 1,
+      "tag": "Calme"
+    },
+    {
+      "id": 9,
+      "titre": "Privilégie la dette morale au contrat juridique",
+      "mantra": "L'obligation relationnelle prime sur le formalisme légal.",
+      "partie": 2,
+      "tag": "Réseaux"
+    },
+    {
+      "id": 17,
+      "titre": "Impose ton rythme",
+      "mantra": "Tant que ton temps appartient aux autres, ton pouvoir leur appartient aussi.",
+      "partie": 3,
+      "tag": "Tempo"
+    },
+    {
+      "id": 24,
+      "titre": "Décide lentement, exécute vite",
+      "mantra": "La lenteur est pour la lucidité, la vitesse est pour la surprise.",
+      "partie": 3,
+      "tag": "Exécution"
+    },
+    {
+      "id": 32,
+      "titre": "Ne montre jamais toute l'architecture",
+      "mantra": "L'opacité maîtrisée protège sans figer le jeu.",
+      "partie": 4,
+      "tag": "Architecture"
+    },
+    {
+      "id": 40,
+      "titre": "Construis des systèmes qui fonctionnent sans toi",
+      "mantra": "L'Architecte se retire en silence ; son œuvre s'impose.",
+      "partie": 6,
+      "tag": "Systèmes"
+    },
+    {
+      "id": 41,
+      "titre": "Loge ton pouvoir dans les flux",
+      "mantra": "Un titre sans flux, c'est du vent.",
+      "partie": 6,
+      "tag": "Flux"
+    },
+    {
+      "id": 50,
+      "titre": "Deviens nécessaire",
+      "mantra": "Est nécessaire ce qu’il coûte plus cher de remplacer que de protéger.",
+      "partie": 6,
+      "tag": "Nécessité"
+    }
+  ],
+  "metadonnees": {
+    "auteur": "Stanislas Longo",
+    "version": "2.0",
+    "description": "Le livre comme moteur stratégique du site et des analyses War Room."
+  }
+}
