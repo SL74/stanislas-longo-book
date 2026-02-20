@@ -16,22 +16,29 @@
     },
     {
       "id": 3,
-      "titre": "Sois lisible sans être dcodable",
+      "titre": "Sois lisible sans être décodable",
       "mantra": "Ce qui est trop lisible devient vulnérable.",
       "partie": 1,
       "tag": "Opacité"
     },
     {
       "id": 4,
-      "titre": "Ne combats jamais sur un terrain que tu n’as pas choisi",
-      "mantra": "Toute bataille perdue commence sur un terrain imposé.",
+      "titre": "Ne combats jamais sur un terrain imposé",
+      "mantra": "Toute bataille perdue commence sur un terrain que tu n’as pas choisi.",
       "partie": 1,
       "tag": "Terrain"
     },
     {
+      "id": 7,
+      "titre": "Ne révèle jamais ton objectif final",
+      "mantra": "Séquence tes intentions pour désorienter les résistances.",
+      "partie": 1,
+      "tag": "Séquençage"
+    },
+    {
       "id": 8,
       "titre": "Impose ton calme comme hiérarchie naturelle",
-      "mantra": "Dans le chaos, celui qui reste stable devient centre de gravité.",
+      "mantra": "Dans le chaos, celui qui reste stable devient le centre de gravité.",
       "partie": 1,
       "tag": "Calme"
     },
@@ -41,6 +48,13 @@
       "mantra": "L'obligation relationnelle prime sur le formalisme légal.",
       "partie": 2,
       "tag": "Réseaux"
+    },
+    {
+      "id": 12,
+      "titre": "La Vacance du Réel",
+      "mantra": "L'absence d'alternative crédible valide la structure arbitrée.",
+      "partie": 2,
+      "tag": "Structure"
     },
     {
       "id": 17,
@@ -59,21 +73,21 @@
     {
       "id": 32,
       "titre": "Ne montre jamais toute l'architecture",
-      "mantra": "L'opacité maîtrisée protège sans figer le jeu.",
+      "mantra": "L'opacité maîtrisée protège sans figer le jeu des flux.",
       "partie": 4,
       "tag": "Architecture"
     },
     {
       "id": 40,
       "titre": "Construis des systèmes qui fonctionnent sans toi",
-      "mantra": "L'Architecte se retire en silence ; son œuvre s'impose.",
+      "mantra": "L'Architecte se retire en silence ; son œuvre s'impose par sa propre logique.",
       "partie": 6,
       "tag": "Systèmes"
     },
     {
       "id": 41,
       "titre": "Loge ton pouvoir dans les flux",
-      "mantra": "Un titre sans flux, c'est du vent.",
+      "mantra": "Un titre sans flux n'est qu'une illusion de puissance.",
       "partie": 6,
       "tag": "Flux"
     },
@@ -87,7 +101,7 @@
   ],
   "metadonnees": {
     "auteur": "Stanislas Longo",
-    "version": "2.0",
-    "description": "Le livre comme moteur stratégique du site et des analyses War Room."
+    "version": "2.1",
+    "description": "Base de données doctrinale pour le site et les analyses War Room."
   }
 }
