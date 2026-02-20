@@ -17,31 +17,31 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body { 
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
-            line-height: 1.6; 
-            color: var(--color-text); 
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
             background: var(--color-white);
             overflow-x: hidden;
         }
 
         /* Responsive Navigation */
-        nav { 
-            background: var(--color-black); 
-            color: var(--color-white); 
-            padding: 1rem 5%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            position: sticky; 
-            top: 0; 
+        nav {
+            background: var(--color-black);
+            color: var(--color-white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
-        nav .logo { 
-            font-size: 1.1rem; 
-            font-weight: 700; 
+        nav .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
             letter-spacing: 2px;
             text-decoration: none;
             color: var(--color-white);
@@ -49,229 +49,115 @@
 
         nav .logo span { color: var(--color-gold); }
 
-        .nav-links { 
-            list-style: none; 
-            display: flex; 
-            gap: 1.5rem; 
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
             align-items: center;
         }
 
-        .nav-links a { 
-            color: var(--color-white); 
-            text-decoration: none; 
-            font-size: 0.85rem; 
+        .nav-links a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: color 0.3s; 
+            transition: color 0.3s;
         }
 
         .nav-links a:hover { color: var(--color-gold); }
 
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 2px;
-            background: var(--color-white);
-            transition: 0.3s;
-        }
-
         /* Hero Section */
-        .hero { 
-            background: linear-gradient(135deg, var(--color-black), var(--color-dark-gray)); 
-            color: var(--color-white); 
-            padding: 8rem 5% 6rem; 
+        .hero {
+            background: linear-gradient(135deg, var(--color-black), var(--color-dark-gray));
+            color: var(--color-white);
+            padding: 8rem 5% 6rem;
             text-align: center;
             position: relative;
         }
 
-        .hero-content { max-width: 900px; margin: 0 auto; }
-
-        .hero h1 { 
-            font-size: clamp(2rem, 5vw, 3.5rem); 
-            font-weight: 800; 
-            margin-bottom: 1.5rem; 
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
             line-height: 1.1;
         }
 
-        .hero .tagline { 
-            font-size: clamp(1rem, 3vw, 1.4rem); 
-            color: var(--color-gold-light); 
+        .hero .tagline {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            color: var(--color-gold-light);
             margin-bottom: 2rem;
             font-weight: 500;
+            letter-spacing: 1px;
         }
 
-        .hero-divider { 
-            width: 60px; 
-            height: 4px; 
-            background: var(--color-gold); 
-            margin: 0 auto 2.5rem; 
+        .hero-divider {
+            width: 80px;
+            height: 4px;
+            background: var(--color-gold);
+            margin: 0 auto 2.5rem;
         }
 
-        .hero .subtitle { 
-            font-size: 1.1rem; 
-            color: #bbb; 
-            margin-bottom: 3.5rem; 
-            max-width: 700px; 
-            margin-left: auto; 
-            margin-right: auto; 
-        }
-
-        /* Buttons */
-        .cta-buttons { 
-            display: flex; 
-            gap: 1rem; 
-            justify-content: center; 
-            flex-wrap: wrap; 
-        }
-
-        .btn { 
-            padding: 1rem 2rem; 
-            font-size: 0.95rem; 
-            border: none; 
-            border-radius: 4px; 
-            cursor: pointer; 
-            font-weight: 700; 
-            text-decoration: none;
-            display: inline-block; 
-            transition: all 0.3s; 
-            text-align: center;
-        }
-
-        .btn-primary { 
-            background: var(--color-gold); 
-            color: var(--color-black); 
-        }
-
-        .btn-primary:hover { 
-            background: var(--color-gold-light);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(201, 169, 97, 0.3);
-        }
-
-        .btn-secondary { 
-            background: transparent; 
-            color: var(--color-white); 
-            border: 1px solid rgba(255,255,255,0.3); 
-        }
-
-        .btn-secondary:hover { 
-            background: rgba(255,255,255,0.05);
-            border-color: var(--color-gold);
-            color: var(--color-gold);
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 3.5rem;
+            max-width: 800px;
+            margin: 0 auto 3.5rem;
         }
 
         /* Content Sections */
         section { padding: 6rem 5%; }
-
         .section-header { text-align: center; margin-bottom: 4rem; }
-        .section-header h2 { font-size: 2.2rem; color: var(--color-black); margin-bottom: 1rem; }
-        .section-header .divider { width: 40px; height: 3px; background: var(--color-gold); margin: 0 auto; }
+        .section-header h2 { font-size: 2.5rem; color: var(--color-black); margin-bottom: 1rem; }
+        .divider { width: 50px; height: 3px; background: var(--color-gold); margin: 0 auto; }
 
-        /* Grid Layouts */
         .grid { display: grid; gap: 2rem; }
         .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }
 
-        /* Resource Links Section */
-        .resources-section { background: var(--color-light-gray); }
         .resource-card {
             background: var(--color-white);
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             text-decoration: none;
             color: inherit;
             transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            border-bottom: 3px solid transparent;
         }
-        .resource-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .resource-card h3 { color: var(--color-gold); font-size: 1.2rem; }
-        .resource-card p { font-size: 0.9rem; color: #666; }
 
-        /* Lessons Section */
-        .lesson-card { 
-            background: var(--color-white); 
-            padding: 2.5rem; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--color-gold);
+        .resource-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-gold);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
         }
-        .lesson-number { font-size: 3rem; font-weight: 800; color: rgba(201, 169, 97, 0.2); margin-bottom: -1.5rem; }
-        .lesson-card h3 { margin-top: 1rem; margin-bottom: 1rem; font-size: 1.3rem; }
 
-        /* Author Section */
-        .author-section { background: var(--color-black); color: var(--color-white); }
-        .author-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center; max-width: 1000px; margin: 0 auto; }
-        .author-img { width: 100%; border-radius: 8px; filter: grayscale(20%); border: 1px solid var(--color-gold); }
+        .resource-card h3 { color: var(--color-gold); margin-bottom: 1rem; }
 
-        /* Form Section */
-        .form-section { background: var(--color-gold); color: var(--color-black); }
-        .form-container { max-width: 500px; margin: 0 auto; background: var(--color-white); padding: 3rem; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 700; font-size: 0.9rem; }
-        .form-group input { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; }
-        .btn-submit { width: 100%; padding: 1rem; background: var(--color-black); color: var(--color-white); border: none; border-radius: 4px; font-weight: 700; cursor: pointer; transition: 0.3s; }
-        .btn-submit:hover { opacity: 0.9; }
-
-        /* Footer */
-        footer { background: #000; color: #777; padding: 4rem 5% 2rem; text-align: center; }
-        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
-        .footer-links a { color: #bbb; text-decoration: none; font-size: 0.85rem; }
-        .footer-links a:hover { color: var(--color-gold); }
-
-        /* Responsive Mobile Adjustments */
-        @media (max-width: 768px) {
-            nav { padding: 1rem 5%; }
-            .menu-toggle { display: flex; }
-            .nav-links {
-                position: fixed;
-                top: 60px;
-                right: -100%;
-                width: 80%;
-                height: calc(100vh - 60px);
-                background: var(--color-black);
-                flex-direction: column;
-                padding: 4rem 2rem;
-                transition: 0.4s;
-                gap: 2rem;
-                align-items: flex-start;
-                border-left: 1px solid var(--color-dark-gray);
-            }
-            .nav-links.active { right: 0; }
-            .hero { padding-top: 6rem; }
-            .grid-2, .author-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-            .author-img { max-width: 300px; margin: 0 auto; }
-            .section-header h2 { font-size: 1.8rem; }
-            .form-container { padding: 2rem; }
+        .btn {
+            padding: 1.2rem 2.5rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
         }
+
+        .btn-gold { background: var(--color-gold); color: var(--color-black); }
+        .btn-outline { border: 1px solid var(--color-gold); color: var(--color-gold); margin-left: 1rem; }
+
+        footer { background: #000; color: #777; padding: 4rem 5%; text-align: center; }
     </style>
 </head>
 <body>
-
     <nav>
         <a href="#" class="logo">STANISLAS <span>LONGO</span></a>
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="nav-links">
+            <a href="#livre">La Doctrine</a>
+            <a href="/analyses-war-room">War Room</a>
+            <a href="#auteur">L'Auteur</a>
+            <a href="#contact">Contact</a>
         </div>
-        <ul class="nav-links">
-            <li><a href="#livre">Le Livre</a></li>
-            <li><a href="#ressources">Paratexte</a></li>
-            <li><a href="#lecons">5 Leçons</a></li>
-            <li><a href="/analyses-war-room">Analyses</a></li>
-            <li><a href="#auteur">Auteur</a></li>
-            <li><a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1rem; color: black;">Commander</a></li>
-        </ul>
     </nav>
 
     <header class="hero">
@@ -279,145 +165,37 @@
             <h1>Les 50 Lois du Pouvoir Contemporain</h1>
             <p class="tagline">Manuel de Lucidité Stratégique pour les Bâtisseurs de l'Afrique Nouvelle</p>
             <div class="hero-divider"></div>
-            <p class="subtitle">Le pouvoir ne se prend plus, il se conçoit. Maîtrisez l'architecture invisible pour transformer votre réalité.</p>
-            <div class="cta-buttons">
-                <a href="#form" class="btn btn-primary">Accès Gratuit (Intro + Partie 1)</a>
-                <a href="/analyses-war-room" class="btn btn-secondary">Explorer les Analyses</a>
+            <p class="subtitle">Le pouvoir ne se prend plus, il se conçoit. Maîtrisez l'architecture invisible pour structurer le futur du continent et transformer votre influence en héritage.</p>
+            <div class="cta">
+                <a href="#contact" class="btn btn-gold">Accéder à la Doctrine</a>
+                <a href="/analyses-war-room" class="btn btn-outline">Explorer les Analyses</a>
             </div>
         </div>
     </header>
 
     <section id="livre">
-        <div class="grid grid-2">
-            <div style="text-align: center;">
-                <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/a5c871a0-e764-4d24-a418-b7ba84859902.png" alt="Livre" style="max-width: 100%; border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.2);">
-            </div>
-            <div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Une Doctrine de Puissance</h2>
-                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">Fruit de 20 ans d'intervention stratégique sur le continent africain, cet ouvrage déconstruit les mécanismes de domination et propose une nouvelle grammaire de l'action.</p>
-                <ul style="list-style: none; margin-bottom: 2.5rem;">
-                    <li style="margin-bottom: 1rem; display: flex; gap: 10px;"><span style="color: var(--color-gold);">●</span> 50 lois universelles adaptées aux enjeux africains</li>
-                    <li style="margin-bottom: 1rem; display: flex; gap: 10px;"><span style="color: var(--color-gold);">●</span> Analyses de cas réels et scénarios de terrain</li>
-                    <li style="margin-bottom: 1rem; display: flex; gap: 10px;"><span style="color: var(--color-gold);">●</span> Méthodologie de construction d'infrastructure d'influence</li>
-                </ul>
-                <a href="#form" class="btn btn-primary">Télécharger l'extrait gratuit</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="ressources" class="resources-section">
         <div class="section-header">
-            <h2>Le Paratexte du Stratège</h2>
-            <p>Accédez aux outils d'analyse qui complètent la doctrine.</p>
+            <h2>Une Nouvelle Grammaire de l'Action</h2>
             <div class="divider"></div>
         </div>
         <div class="grid grid-3">
-            <a href="/content/paratexte/guide-lecture.md" class="resource-card">
-                <h3>Guide de Lecture</h3>
-                <p>Comment naviguer dans l'ouvrage selon votre profil (Décideur, Entrepreneur, Activiste).</p>
-            </a>
-            <a href="/content/paratexte/glossaire.md" class="resource-card">
-                <h3>Glossaire Stratégique</h3>
-                <p>Définitions précises des concepts de filiation, capital symbolique et nécropolitique.</p>
-            </a>
-            <a href="/content/paratexte/notes-filiation.md" class="resource-card">
-                <h3>Notes de Filiation</h3>
-                <p>Les racines intellectuelles : de Machiavel à Mbembe en passant par Sun Tzu.</p>
-            </a>
-            <a href="/content/paratexte/bibliographie.md" class="resource-card">
-                <h3>Bibliographie</h3>
-                <p>La bibliothèque du bâtisseur : 50 ouvrages essentiels pour comprendre le monde.</p>
-            </a>
-            <a href="/content/paratexte/note-methodologique.md" class="resource-card">
-                <h3>Méthodologie</h3>
-                <p>La rigueur de l'audit et de l'analyse appliqués à la stratégie de puissance.</p>
-            </a>
-            <a href="/analyses-war-room" class="resource-card" style="border: 1px solid var(--color-gold);">
-                <h3>War Room Analyses</h3>
-                <p>Application directe des lois sur des cas d'actualité brûlante.</p>
-            </a>
-        </div>
-    </section>
-
-    <section id="lecons">
-        <div class="section-header">
-            <h2>5 Leçons de Lucidité</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="grid grid-3">
-            <div class="lesson-card">
-                <div class="lesson-number">01</div>
-                <h3>Maîtrise du Récit</h3>
-                <p>Le pouvoir n'est pas dans les faits, mais dans l'interprétation que vous en imposez au monde.</p>
+            <div class="resource-card">
+                <h3>Architecture vs Survie</h3>
+                <p>Passez de la réaction à la conception. Le pouvoir réside dans les systèmes, pas dans les titres.</p>
             </div>
-            <div class="lesson-card">
-                <div class="lesson-number">02</div>
-                <h3>L'Infrastructure Invisible</h3>
-                <p>Celui qui possède le tuyau contrôle le flux. Devenez indispensable avant d'être visible.</p>
+            <div class="resource-card">
+                <h3>Maîtrise des Flux</h3>
+                <p>Celui qui contrôle le mouvement contrôle la décision. Identifiez les veines de puissance du continent.</p>
             </div>
-            <div class="lesson-card">
-                <div class="lesson-number">03</div>
-                <h3>Tempo Stratégique</h3>
-                <p>Savoir attendre est une arme. Savoir frapper à la milliseconde près est une maîtrise.</p>
+            <div class="resource-card">
+                <h3>Lucidité Opérationnelle</h3>
+                <p>50 lois forgées par 20 ans d'intervention sur les terrains les plus complexes d'Afrique.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="auteur" class="author-section">
-        <div class="author-grid">
-            <img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/9889879a-887d-4da2-a262-3d439afaa10c.png" alt="Stanislas Longo" class="author-img">
-            <div>
-                <h2 style="color: var(--color-gold); margin-bottom: 1.5rem;">Stanislas Longo</h2>
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #ccc;">Consultant en stratégie et finance, architecte de solutions pour les marchés émergents. Stanislas Longo a dédié sa carrière à l'analyse des rapports de force et à la construction de structures de puissance en Afrique.</p>
-                <p style="color: #aaa;">Fondateur du cabinet S&A, il intervient auprès des décideurs pour naviguer dans la complexité géopolitique et économique contemporaine.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="form" class="form-section">
-        <div class="form-container">
-            <h2 style="text-align:center; margin-bottom:2rem;">Recevoir l'Extrait Gratuit</h2>
-            <form action="https://formspree.io/f/xdkqrwpd" method="POST">
-                <div class="form-group">
-                    <label>Votre Nom</label>
-                    <input type="text" name="name" required placeholder="Ex: Jean Dupont">
-                </div>
-                <div class="form-group">
-                    <label>Email Professionnel</label>
-                    <input type="email" name="email" required placeholder="nom@entreprise.com">
-                </div>
-                <p style="font-size: 0.75rem; color: #888; margin-bottom: 1.5rem;">En soumettant ce formulaire, vous acceptez de recevoir des analyses stratégiques exclusives. Désinscription en un clic.</p>
-                <button type="submit" class="btn-submit">Accéder aux Leçons & à l'Extrait</button>
-            </form>
         </div>
     </section>
 
     <footer>
-        <div class="footer-links">
-            <a href="#livre">Le Livre</a>
-            <a href="#ressources">Outils</a>
-            <a href="/analyses-war-room">Analyses</a>
-            <a href="#auteur">Auteur</a>
-            <a href="mailto:contact@stanislas-longo.com">Contact</a>
-        </div>
-        <p>© 2026 Stanislas Longo | Les 50 Lois du Pouvoir Contemporain</p>
+        <p>© 2026 Stanislas Longo | Architecte de Puissance</p>
     </footer>
-
-    <script>
-        const menuBtn = document.getElementById('mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            menuBtn.classList.toggle('toggle');
-        });
-
-        // Close menu on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
 </body>
 </html>
