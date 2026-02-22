@@ -58,29 +58,32 @@
             color: #bbb; 
         }
         
-        .article-image { 
-            margin: 30px 0; 
-            border: 1px solid #222; 
-            border-radius: 8px; 
-            overflow: hidden;
-            max-width: 100%;
-        }
+       /* Styles pour les images */
+.article-image { 
+    margin: 30px 0; 
+    border: 1px solid #222; 
+    border-radius: 8px; 
+    overflow: hidden;
+    max-width: 100%;  /* S'adapte au conteneur */
+}
 
-        .article-image img { 
-            width: 100%; 
-            max-width: 700px;
-            height: auto; 
-            display: block;
-            margin: 0 auto;
-        }
+.article-image img { 
+    width: 100%; 
+    max-width: 700px;  /* AJOUTÉ : Limite la largeur maximale */
+    height: auto; 
+    display: block;
+    margin: 0 auto;  /* AJOUTÉ : Centre l'image */
+}
 
-        .article-image.logo-image img {
-            max-width: 500px;
-        }
+/* Image logo (plus petite) */
+.article-image.logo-image img {
+    max-width: 500px;  /* Logo plus petit que infographie */
+}
 
-        .article-image.infographic-image img {
-            max-width: 750px;
-        }
+/* Image infographie (taille moyenne) */
+.article-image.infographic-image img {
+    max-width: 750px;  /* Infographie légèrement plus grande */
+}
 
         .source { 
             font-size: 0.85rem; 
