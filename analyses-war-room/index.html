@@ -1,271 +1,345 @@
-<!DOCTYPE html><html lang="fr"><head> <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Analyses War Room — Stanislas Longo</title>
- <meta name="description" content="Analyses stratégiques en temps réel sur les recompositions du pouvoir en Afrique. Par Stanislas Longo.">
- 
- <style>
- * { margin: 0; padding: 0; box-sizing: border-box; }
- body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif; background-color: #0a0a0a; color: #f5f5f5; line-height: 1.6; }
- header { background-color: #000; padding: 1.5rem 2rem; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
- nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
- .logo { font-size: 1.2rem; font-weight: 700; color: #f5f5f5; text-decoration: none; letter-spacing: 0.05em; }
- .logo span { color: #c9a961; }
- nav ul { display: flex; gap: 2rem; list-style: none; }
- nav a { color: #f5f5f5; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
- nav a:hover { color: #c9a961; }
- .hero { max-width: 900px; margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
- .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; font-family: Georgia, serif; }
- .hero .subtitle { font-size: 1.1rem; color: #999; margin-bottom: 2rem; }
- .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem 4rem; }
- .analyses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin: 3rem 0; }
- .analysis-card { background-color: #111; border: 1px solid #222; border-radius: 8px; overflow: hidden; transition: all 0.3s; display: flex; flex-direction: column; }
- .analysis-card:hover { border-color: #c9a961; transform: translateY(-4px); box-shadow: 0 8px 24px rgba(201, 169, 97, 0.1); }
- .card-header { background-color: #1a1a1a; padding: 2rem; border-bottom: 2px solid #c9a961; }
- .card-number { font-size: 0.85rem; color: #c9a961; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
- .card-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: Georgia, serif; color: #f5f5f5; }
- .card-subtitle { font-size: 0.9rem; color: #999; }
- .card-body { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; }
- .card-description { color: #ddd; margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6; }
- .card-meta { display: flex; flex-direction: column; gap: 1rem; margin-top: auto; }
- .meta-item { font-size: 0.85rem; color: #999; display: flex; justify-content: space-between; }
- .meta-label { font-weight: 600; }
- .read-link { display: inline-block; margin-top: 1.5rem; color: #c9a961; text-decoration: none; font-weight: 600; transition: all 0.3s; }
- .read-link:hover { color: #f5f5f5; }
- .read-link::after { content: ' →'; transition: transform 0.3s; }
- .analysis-card:hover .read-link::after { transform: translateX(4px); }
- .status-badge { display: inline-block; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
- .status-published { background-color: rgba(201, 169, 97, 0.2); color: #c9a961; }
- .info-section { background-color: #111; border: 1px solid #222; border-radius: 8px; padding: 2rem; margin: 3rem 0; text-align: center; }
- .info-section h2 { font-size: 1.3rem; margin-bottom: 1rem; color: #c9a961; font-family: Georgia, serif; }
- .info-section p { color: #ddd; margin-bottom: 1rem; }
- footer { background-color: #000; padding: 3rem 2rem; border-top: 1px solid #222; text-align: center; }
- footer p { color: #666; font-size: 0.9rem; }
- footer a { color: #c9a961; text-decoration: none; }
- footer a:hover { text-decoration: underline; }
- @media (max-width: 768px) { .hero h1 { font-size: 2rem; } nav ul { gap: 1rem; font-size: 0.8rem; } .analyses-grid { grid-template-columns: 1fr; } .card-title { font-size: 1.2rem; } }
- </style></head><body> <header>
- <nav>
- <a href="/" class="logo">STANISLAS <span>LONGO</span></a>
- <ul>
- <li><a href="/#livre">Le Livre</a></li>
- <li><a href="/#lecons">5 Leçons</a></li>
- <li><a href="/analyses-war-room">Analyses</a></li>
- <li><a href="/#auteur">À Propos</a></li>
- <li><a href="/#contact">Contact</a></li>
- </ul>
- </nav>
- </header>
- <div class="hero">
- <h1>Analyses War Room</h1>
- <p class="subtitle">Décryptages stratégiques en temps réel sur les recompositions du pouvoir en Afrique</p>
- </div>
- <div class="container">
- <div class="analyses-grid">
- <!-- BRIEF #7 : ESKOM --><article class="analysis-card"> <div class="card-header">
- <div class="card-number">Analysis #7</div>
- <h2 class="card-title">Eskom 2026 : L'Antiloi du Monopole Prisonnier</h2>
- <p class="card-subtitle">Quand 30 GW de Capacité Ne Suffisent Pas à Allumer un Pays</p>
- </div>
- <div class="card-body">
- <div class="status-badge status-published">PUBLIÉ</div>
- <p class="card-description">
- Le géant électrique sud-africain contrôle 95% de l'électricité du pays, mais seulement 60% de ses centrales fonctionnent. 
- <strong>12 000 MW de capacité morte</strong>, R250 milliards de subventions annuelles, 2 800 heures de delestages en 2025. 
- Eskom incarne l'<strong>antiloi parfaite de la Loi 40</strong> : un système qui ne peut fonctionner ni avec lui-même, ni sans lui-même.
- </p>
- <div class="card-meta">
- <div class="meta-item">
- <span class="meta-label">Publié</span>
- <span>15 février 2026</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Doctrine</span>
- <span>Loi 40 (Antiloi) : Le système doit fonctionner sans toi</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Focus</span>
- <span>Monopole, effondrement structurel, unbundling</span>
- </div>
- </div>
- <a href="/analyses-war-room/eskom-2026-antiloi-monopole-prisonnier" class="read-link">Lire l'analyse</a>
- </div></article> 
- <!-- BRIEF #6 : CLUB DES MINÉRAUX CRITIQUES -->
- <article class="analysis-card">
- <div class="card-header">
- <div class="card-number">Analysis #6</div>
- <h2 class="card-title">Le Club des Minéraux Critiques : Refuse le terrain qu’on te tend</h2>
- <p class="card-subtitle">Quand l’Afrique choisit son terrain dans la guerre des flux</p>
- </div>
- <div class="card-body">
- <div class="status-badge status-published">PUBLIÉ</div>
- <p class="card-description">
- Washington réunit plus de cinquante pays pour bâtir un club des minéraux critiques et lance 
- <strong>Project Vault</strong>, une réserve stratégique de 10 milliards de dollars pour sécuriser ses flux. 
- L’analyse montre comment l’Afrique peut refuser les terrains imposés (OTAN zombie, sanctions, normes, corridors) 
- et imposer les siens : gouvernance des corridors, co‑écriture des standards, stockpiles régionaux.
- </p>
- <div class="card-meta">
- <div class="meta-item">
- <span class="meta-label">Publié</span>
- <span>08 février 2026</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Doctrine</span>
- <span>Loi 4 : Ne combats jamais sur un terrain que tu n’as pas choisi</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Focus</span>
- <span>Minéraux critiques, Project Vault, corridors, normes</span>
- </div>
- </div>
- <a href="/analyses-war-room/2026-club-mineraux-critiques/" class="read-link">Lire l'analyse</a>
- </div>
- </article>
- <!-- BRIEF #5 : NIGERIA 2026 -->
- <article class="analysis-card">
- <div class="card-header">
- <div class="card-number">Analysis #5</div>
- <h2 class="card-title">Nigeria 2026 : Rembourser sa Dette en Flux Physiques</h2>
- <p class="card-subtitle">L'Architecture de Souveraineté face à la dépendance au Dollar</p>
- </div>
- <div class="card-body">
- <div class="status-badge status-published">PUBLIÉ</div>
- <p class="card-description">90 000 barils de brut quittent les côtes nigérianes chaque jour pour effacer une deete — sans passer par un seul bureau de change. En ouvrant 50 blocs pétroliers avec des <strong>signature fees réduits de 98%</strong> (de $200M à $3-7M) and en remboursant Afreximbank en flux physiques, le Nigeria démontre que la souveraineté contemporaine ne se crie pas : elle se <strong>structure</strong>.</p>
- <div class="card-meta">
- <div class="meta-item">
- <span class="meta-label">Publié</span>
- <span>01 février 2026</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Doctrine</span>
- <span>Loi 41 : Loge ton Pouvoir dans les Flux</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Focus</span>
- <span>Barter souverain, dé-dollarisation, infrastructure matérielle</span>
- </div>
- </div>
- <a href="/analyses-war-room/nigeria-2026-barter-souverain/" class="read-link">Lire l'analyse</a>
- </div>
- </article>
- <!-- BRIEF #4 : CEMAC 2026 -->
- <article class="analysis-card">
- <div class="card-header">
- <div class="card-number">Analysis #4</div>
- <h2 class="card-title">CEMAC 2026 : Le Sommet de la Dernière Chance</h2>
- <p class="card-subtitle">Quand la crise monétaire révèle les fragilités du pouvoir</p>
- </div>
- <div class="card-body">
- <div class="status-badge status-published">PUBLIÉ</div>
- <p class="card-description">Le sommet de la CEMAC révèle comment une crise monétaire peut fracturer un bloc régional. En dissimulant l'objectif final — le maintien des structures de rente — derrière un séquençage d'urgence monétaire, les dirigeants évitent les résistances anticipées des partenaires internationaux.</p>
- <div class="card-meta">
- <div class="meta-item">
- <span class="meta-label">Publié</span>
- <span>25 janvier 2026</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Doctrine</span>
- <span>Loi 7 : Ne révèle jamais ton objectif final</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Focus</span>
- <span>Crise monétaire, séquençage politique, rentes</span>
- </div>
- </div>
- <a href="/analyses-war-room/cemac-2026-sommet-crise-monetaire" class="read-link">Lire l'analyse</a>
- </div>
- </article>
- <!-- BRIEF #3 : OUGANDA -->
- <article class="analysis-card">
- <div class="card-header">
- <div class="card-number">Analysis #3</div>
- <h2 class="card-title">Ouganda 2026 : L'Antiloi</h2>
- <p class="card-subtitle">Quand 40 ans de pouvoir ne construisent rien</p>
- </div>
- <div class="card-body">
- <div class="status-badge status-published">PUBLIÉ</div>
- <p class="card-description">Museveni, 81 ans, réélu pour un 7ème mandat. 71,65% des voix. 40 ans au pouvoir. Deux amendements constitutionnels taillés sur mesure. Résultat : un système qui ne peut plus fonctionner sans lui. L'antiloi parfaite de la <strong>Loi 40</strong>.</p>
- <div class="card-meta">
- <div class="meta-item">
- <span class="meta-label">Publié</span>
- <span>18 janvier 2026</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Doctrine</span>
- <span>Loi 40 : Le système doit fonctionner sans toi</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Focus</span>
- <span>Dépendance biologique, succession, effondrement</span>
- </div>
- </div>
- <a href="/analyses-war-room/ouganda-2026-antiloi" class="read-link">Lire l'analyse</a>
- </div>
- </article>
- <!-- BRIEF #2 : MINÉRAUX -->
- <article class="analysis-card">
- <div class="card-header">
- <div class="card-number">Analysis #2</div>
- <h2 class="card-title">2026 : Les Élections comme Couverture de Guerre Économique</h2>
- <p class="card-subtitle">Quand les bulletins servent de décor à une bataille silencieuse pour les minéraux critiques africains</p>
- </div>
- <div class="card-body">
- <div class="status-badge status-published">PUBLIÉ</div>
- <p class="card-description">Année électorale record sur le continent, mais l'essentiel se joue ailleurs : blocs regional, minéraux critiques, corridors d'influence. Le véritable pouvoir se déplace des urnes vers ceux qui contrôlent les flux dont le monde ne peut pas se passer.</p>
- <div class="card-meta">
- <div class="meta-item">
- <span class="meta-label">Publié</span>
- <span>11 janvier 2026</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Doctrine</span>
- <span>Loi 1 : Domine le récit avant la victoire</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Focus</span>
- <span>Minéraux critiques, souveraineté par les flux</span>
- </div>
- </div>
- <a href="/analyses-war-room/2026-elections-mineraux-critiques.html" class="read-link">Lire l'analyse</a>
- </div>
- </article>
- <!-- BRIEF #1 : GUINÉE -->
- <article class="analysis-card">
- <div class="card-header">
- <div class="card-number">Analysis #1</div>
- <h2 class="card-title">Guinée : La Vacance du Réel</h2>
- <p class="card-subtitle">Comment l'absence d'alternative crédible valide une structure déjà arbitrée</p>
- </div>
- <div class="card-body">
- <div class="status-badge status-published">PUBLIÉ</div>
- <p class="card-description">86,72% aux élections de Doumbouya. Ce chiffre ne mesure pas la popularité — il révèle la <strong>vacance du réel</strong>. Quand il n'existe plus d'alternative crédible pour les acteurs décisifs, le résultat devient un indice de résignation structurelle, pas de triomphe démocratique.</p>
- <div class="card-meta">
- <div class="meta-item">
- <span class="meta-label">Publié</span>
- <span>2 janvier 2026</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Doctrine</span>
- <span>Loi 12 : la Vacance du Réel</span>
- </div>
- <div class="meta-item">
- <span class="meta-label">Focus</span>
- <span>Flux bauxite, restructuration de la rente, cohésion militaire</span>
- </div>
- </div>
- <a href="/analyses-war-room/guinee-vacance-du-reel" class="read-link">Lire l'analyse</a>
- </div>
- </article>
- </div>
- <div class="info-section">
- <h2>Méthodologie</h2>
- <p>Ces analyses appliquent le cadre des <strong>50 Lois du Pouvoir Contemporain</strong> à des situations réelles en Afrique.</p>
- <p>Focus : flux économiques, rapports de force stratégiques, et structures invisibles qui gouvernent réellement.</p>
- </div>
- </div>
- <footer>
- <p>© 2026 Stanislas Longo. Tous droits réservés.</p>
- <p style="margin-top: 0.5rem;">
- <a href="https://www.linkedin.com/in/stanislas-longo-mba-631a1130">LinkedIn</a>
- </p>
- </footer></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyses War Room — Stanislas Longo</title>
+    <meta name="description" content="Analyses stratégiques en temps réel sur les recompositions du pouvoir en Afrique. Par Stanislas Longo.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif; background-color: #0a0a0a; color: #f5f5f5; line-height: 1.6; }
+        header { background-color: #000; padding: 1.5rem 2rem; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.2rem; font-weight: 700; color: #f5f5f5; text-decoration: none; letter-spacing: 0.05em; }
+        .logo span { color: #c9a961; }
+        nav ul { display: flex; gap: 2rem; list-style: none; }
+        nav a { color: #f5f5f5; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        nav a:hover { color: #c9a961; }
+        .hero { max-width: 900px; margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
+        .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; font-family: Georgia, serif; }
+        .hero .subtitle { font-size: 1.1rem; color: #999; margin-bottom: 2rem; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem 4rem; }
+        .analyses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .analysis-card { background-color: #111; border: 1px solid #222; border-radius: 8px; overflow: hidden; transition: all 0.3s; display: flex; flex-direction: column; }
+        .analysis-card:hover { border-color: #c9a961; transform: translateY(-4px); box-shadow: 0 8px 24px rgba(201, 169, 97, 0.1); }
+        .card-header { background-color: #1a1a1a; padding: 2rem; border-bottom: 2px solid #c9a961; }
+        .card-number { font-size: 0.85rem; color: #c9a961; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        .card-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; font-family: Georgia, serif; color: #f5f5f5; }
+        .card-subtitle { font-size: 0.9rem; color: #999; }
+        .card-body { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-description { color: #ddd; margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6; }
+        .card-meta { display: flex; flex-direction: column; gap: 1rem; margin-top: auto; }
+        .meta-item { font-size: 0.85rem; color: #999; display: flex; justify-content: space-between; }
+        .meta-label { font-weight: 600; }
+        .read-link { display: inline-block; margin-top: 1.5rem; color: #c9a961; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .read-link:hover { color: #f5f5f5; }
+        .read-link::after { content: ' →'; transition: transform 0.3s; }
+        .analysis-card:hover .read-link::after { transform: translateX(4px); }
+        .status-badge { display: inline-block; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+        .status-published { background-color: rgba(201, 169, 97, 0.2); color: #c9a961; }
+        .info-section { background-color: #111; border: 1px solid #222; border-radius: 8px; padding: 2rem; margin: 3rem 0; text-align: center; }
+        .info-section h2 { font-size: 1.3rem; margin-bottom: 1rem; color: #c9a961; font-family: Georgia, serif; }
+        .info-section p { color: #ddd; margin-bottom: 1rem; }
+        footer { background-color: #000; padding: 3rem 2rem; border-top: 1px solid #222; text-align: center; }
+        footer p { color: #666; font-size: 0.9rem; }
+        footer a { color: #c9a961; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } nav ul { gap: 1rem; font-size: 0.8rem; } .analyses-grid { grid-template-columns: 1fr; } .card-title { font-size: 1.2rem; } }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">STANISLAS <span>LONGO</span></a>
+            <ul>
+                <li><a href="/#livre">Le Livre</a></li>
+                <li><a href="/#lecons">5 Leçons</a></li>
+                <li><a href="/analyses-war-room">Analyses</a></li>
+                <li><a href="/#auteur">À Propos</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Analyses War Room</h1>
+        <p class="subtitle">Décryptages stratégiques en temps réel sur les recompositions du pouvoir en Afrique</p>
+    </div>
+
+    <div class="container">
+        <div class="analyses-grid">
+            <!-- BRIEF #8 : UNION AFRICAINE -->
+            <article class="analysis-card">
+                <div class="card-header">
+                    <div class="card-number">Analysis #8</div>
+                    <h2 class="card-title">L'Union Africaine Face à Elle-Même</h2>
+                    <p class="card-subtitle">La Cohérence Érodée par les Intérêts Particuliers</p>
+                </div>
+                <div class="card-body">
+                    <div class="status-badge status-published">PUBLIÉ</div>
+                    <p class="card-description">
+                        Le Sommet Extraordinaire de l'UA s'achève sur une déclaration "extrêmement diluée". 
+                        <strong>0 résolution contraignante</strong>, 70% du temps en bilatérales, seulement 
+                        <strong>0,5% des projets transnationaux</strong> tenant leurs engagements. L'UA incarne 
+                        l'<strong>antiloi de la Loi 29</strong> : une succession de masques sans marque identifiable.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Publié</span>
+                            <span>22 février 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Doctrine</span>
+                            <span>Loi 29 : Fais de ta cohérence une marque</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span>Crédibilité institutionnelle, souveraineté africaine</span>
+                        </div>
+                    </div>
+                    <a href="/analyses-war-room/union-africaine-face-a-elle-meme/" class="read-link">Lire l'analyse</a>
+                </div>
+            </article>
+
+            <!-- BRIEF #7 : ESKOM -->
+            <article class="analysis-card">
+                <div class="card-header">
+                    <div class="card-number">Analysis #7</div>
+                    <h2 class="card-title">Eskom 2026 : L'Antiloi du Monopole Prisonnier</h2>
+                    <p class="card-subtitle">Quand 30 GW de Capacité Ne Suffisent Pas à Allumer un Pays</p>
+                </div>
+                <div class="card-body">
+                    <div class="status-badge status-published">PUBLIÉ</div>
+                    <p class="card-description">
+                        Le géant électrique sud-africain contrôle 95% de l'électricité du pays, mais seulement 60% de ses centrales fonctionnent. 
+                        <strong>12 000 MW de capacité morte</strong>, R250 milliards de subventions annuelles, 2 800 heures de delestages en 2025. 
+                        Eskom incarne l'<strong>antiloi parfaite de la Loi 40</strong> : un système qui ne peut fonctionner ni avec lui-même, ni sans lui-même.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Publié</span>
+                            <span>15 février 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Doctrine</span>
+                            <span>Loi 40 (Antiloi) : Le système doit fonctionner sans toi</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span>Monopole, effondrement structurel, unbundling</span>
+                        </div>
+                    </div>
+                    <a href="/analyses-war-room/eskom-2026-antiloi-monopole-prisonnier/" class="read-link">Lire l'analyse</a>
+                </div>
+            </article>
+
+            <!-- BRIEF #6 : CLUB DES MINÉRAUX CRITIQUES -->
+            <article class="analysis-card">
+                <div class="card-header">
+                    <div class="card-number">Analysis #6</div>
+                    <h2 class="card-title">Le Club des Minéraux Critiques : Refuse le terrain qu'on te tend</h2>
+                    <p class="card-subtitle">Quand l'Afrique choisit son terrain dans la guerre des flux</p>
+                </div>
+                <div class="card-body">
+                    <div class="status-badge status-published">PUBLIÉ</div>
+                    <p class="card-description">
+                        Washington réunit plus de cinquante pays pour bâtir un club des minéraux critiques et lance 
+                        <strong>Project Vault</strong>, une réserve stratégique de 10 milliards de dollars pour sécuriser ses flux. 
+                        L'analyse montre comment l'Afrique peut refuser les terrains imposés (OTAN zombie, sanctions, normes, corridors) 
+                        et imposer les siens : gouvernance des corridors, co-écriture des standards, stockpiles régionaux.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Publié</span>
+                            <span>08 février 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Doctrine</span>
+                            <span>Loi 4 : Ne combats jamais sur un terrain que tu n'as pas choisi</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span>Minéraux critiques, Project Vault, corridors, normes</span>
+                        </div>
+                    </div>
+                    <a href="/analyses-war-room/2026-club-mineraux-critiques/" class="read-link">Lire l'analyse</a>
+                </div>
+            </article>
+
+            <!-- BRIEF #5 : NIGERIA 2026 -->
+            <article class="analysis-card">
+                <div class="card-header">
+                    <div class="card-number">Analysis #5</div>
+                    <h2 class="card-title">Nigeria 2026 : Rembourser sa Dette en Flux Physiques</h2>
+                    <p class="card-subtitle">L'Architecture de Souveraineté face à la dépendance au Dollar</p>
+                </div>
+                <div class="card-body">
+                    <div class="status-badge status-published">PUBLIÉ</div>
+                    <p class="card-description">
+                        90 000 barils de brut quittent les côtes nigérianes chaque jour pour effacer une dette — sans passer par un seul bureau de change. 
+                        En ouvrant 50 blocs pétroliers avec des <strong>signature fees réduits de 98%</strong> (de $200M à $3-7M) et en remboursant 
+                        Afreximbank en flux physiques, le Nigeria démontre que la souveraineté contemporaine ne se crie pas : elle se <strong>structure</strong>.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Publié</span>
+                            <span>01 février 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Doctrine</span>
+                            <span>Loi 41 : Loge ton Pouvoir dans les Flux</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span>Barter souverain, dé-dollarisation, infrastructure matérielle</span>
+                        </div>
+                    </div>
+                    <a href="/analyses-war-room/nigeria-2026-barter-souverain/" class="read-link">Lire l'analyse</a>
+                </div>
+            </article>
+
+            <!-- BRIEF #4 : CEMAC 2026 -->
+            <article class="analysis-card">
+                <div class="card-header">
+                    <div class="card-number">Analysis #4</div>
+                    <h2 class="card-title">CEMAC 2026 : Le Sommet de la Dernière Chance</h2>
+                    <p class="card-subtitle">Quand la crise monétaire révèle les fragilités du pouvoir</p>
+                </div>
+                <div class="card-body">
+                    <div class="status-badge status-published">PUBLIÉ</div>
+                    <p class="card-description">
+                        Le sommet de la CEMAC révèle comment une crise monétaire peut fracturer un bloc régional. 
+                        En dissimulant l'objectif final — le maintien des structures de rente — derrière un séquençage d'urgence monétaire, 
+                        les dirigeants évitent les résistances anticipées des partenaires internationaux.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Publié</span>
+                            <span>25 janvier 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Doctrine</span>
+                            <span>Loi 7 : Ne révèle jamais ton objectif final</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span>Crise monétaire, séquençage politique, rentes</span>
+                        </div>
+                    </div>
+                    <a href="/analyses-war-room/cemac-2026-sommet-crise-monetaire/" class="read-link">Lire l'analyse</a>
+                </div>
+            </article>
+
+            <!-- BRIEF #3 : OUGANDA -->
+            <article class="analysis-card">
+                <div class="card-header">
+                    <div class="card-number">Analysis #3</div>
+                    <h2 class="card-title">Ouganda 2026 : L'Antiloi</h2>
+                    <p class="card-subtitle">Quand 40 ans de pouvoir ne construisent rien</p>
+                </div>
+                <div class="card-body">
+                    <div class="status-badge status-published">PUBLIÉ</div>
+                    <p class="card-description">
+                        Museveni, 81 ans, réélu pour un 7ème mandat. 71,65% des voix. 40 ans au pouvoir. 
+                        Deux amendements constitutionnels taillés sur mesure. Résultat : un système qui ne peut plus fonctionner sans lui. 
+                        L'antiloi parfaite de la <strong>Loi 40</strong>.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Publié</span>
+                            <span>18 janvier 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Doctrine</span>
+                            <span>Loi 40 : Le système doit fonctionner sans toi</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span>Dépendance biologique, succession, effondrement</span>
+                        </div>
+                    </div>
+                    <a href="/analyses-war-room/ouganda-2026-antiloi/" class="read-link">Lire l'analyse</a>
+                </div>
+            </article>
+
+            <!-- BRIEF #2 : MINÉRAUX -->
+            <article class="analysis-card">
+                <div class="card-header">
+                    <div class="card-number">Analysis #2</div>
+                    <h2 class="card-title">2026 : Les Élections comme Couverture de Guerre Économique</h2>
+                    <p class="card-subtitle">Quand les bulletins servent de décor à une bataille silencieuse pour les minéraux critiques africains</p>
+                </div>
+                <div class="card-body">
+                    <div class="status-badge status-published">PUBLIÉ</div>
+                    <p class="card-description">
+                        Année électorale record sur le continent, mais l'essentiel se joue ailleurs : blocs régionaux, minéraux critiques, corridors d'influence. 
+                        Le véritable pouvoir se déplace des urnes vers ceux qui contrôlent les flux dont le monde ne peut pas se passer.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Publié</span>
+                            <span>11 janvier 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Doctrine</span>
+                            <span>Loi 1 : Domine le récit avant la victoire</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span>Minéraux critiques, souveraineté par les flux</span>
+                        </div>
+                    </div>
+                    <a href="/analyses-war-room/2026-elections-mineraux-critiques.html" class="read-link">Lire l'analyse</a>
+                </div>
+            </article>
+
+            <!-- BRIEF #1 : GUINÉE -->
+            <article class="analysis-card">
+                <div class="card-header">
+                    <div class="card-number">Analysis #1</div>
+                    <h2 class="card-title">Guinée : La Vacance du Réel</h2>
+                    <p class="card-subtitle">Comment l'absence d'alternative crédible valide une structure déjà arbitrée</p>
+                </div>
+                <div class="card-body">
+                    <div class="status-badge status-published">PUBLIÉ</div>
+                    <p class="card-description">
+                        86,72% aux élections de Doumbouya. Ce chiffre ne mesure pas la popularité — il révèle la <strong>vacance du réel</strong>. 
+                        Quand il n'existe plus d'alternative crédible pour les acteurs décisifs, le résultat devient un indice de résignation structurelle, 
+                        pas de triomphe démocratique.
+                    </p>
+                    <div class="card-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Publié</span>
+                            <span>2 janvier 2026</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Doctrine</span>
+                            <span>Loi 12 : la Vacance du Réel</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Focus</span>
+                            <span>Flux bauxite, restructuration de la rente, cohésion militaire</span>
+                        </div>
+                    </div>
+                    <a href="/analyses-war-room/guinee-vacance-du-reel/" class="read-link">Lire l'analyse</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="info-section">
+            <h2>Méthodologie</h2>
+            <p>Ces analyses appliquent le cadre des <strong>50 Lois du Pouvoir Contemporain</strong> à des situations réelles en Afrique.</p>
+            <p>Focus : flux économiques, rapports de force stratégiques, et structures invisibles qui gouvernent réellement.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Stanislas Longo. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="https://www.linkedin.com/in/stanislas-longo-mba-631a1130/">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
