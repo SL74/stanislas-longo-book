@@ -1,8 +1,3 @@
-# Supprimer l'ancien sitemap corrompu
-Remove-Item sitemap.xml
-
-# Créer un nouveau fichier propre (sans espaces, sans BOM)
-$xmlContent = @'
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
@@ -72,13 +67,3 @@ $xmlContent = @'
 <priority>0.8</priority>
 </url>
 </urlset>
-'@
-
-# Écrire sans BOM
-$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
-[System.IO.File]::WriteAllText("$pwd\sitemap.xml", $xmlContent, $utf8NoBom)
-
-# Committer tout
-git add vercel.json sitemap.xml
-git commit -m "fix: Correction Content-Type sitemap.xml + recréation propre"
-git push origin main
