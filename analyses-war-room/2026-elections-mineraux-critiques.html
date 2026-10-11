@@ -1,235 +1,40 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analyses War Room — Stanislas Longo</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background-color: #0a0a0a; color: #f5f5f5; line-height: 1.6; }
-        header { background-color: #000; padding: 1.5rem 2rem; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 100; }
-        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.2rem; font-weight: 700; color: #f5f5f5; text-decoration: none; letter-spacing: 0.05em; }
-        .logo span { color: #c9a961; }
-        nav ul { display: flex; gap: 2rem; list-style: none; }
-        nav a { color: #f5f5f5; text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
-        nav a:hover { color: #c9a961; }
-        .hero { max-width: 900px; margin: 4rem auto 3rem; padding: 0 2rem; text-align: center; }
-        .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; font-family: Georgia, serif; }
-        .hero .subtitle { font-size: 1.1rem; color: #999; margin-bottom: 2rem; }
-        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
-        .article { background-color: #111; border: 1px solid #222; border-radius: 8px; padding: 3rem; margin-bottom: 2rem; }
-        .article-header { border-bottom: 2px solid #c9a961; padding-bottom: 1.5rem; margin-bottom: 2rem; }
-        .article-title { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; font-family: Georgia, serif; }
-        .article-meta { color: #999; font-size: 0.9rem; }
-        .section { margin-bottom: 2.5rem; }
-        .section h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #c9a961; font-weight: 600; }
-        .section h3 { font-size: 1.2rem; margin-bottom: 0.8rem; margin-top: 1.5rem; font-weight: 600; }
-        .section p { margin-bottom: 1rem; color: #ddd; }
-        .section ul { margin-left: 1.5rem; margin-bottom: 1rem; }
-        .section li { margin-bottom: 0.5rem; color: #ddd; }
-        .highlight-box { background-color: #1a1a1a; border-left: 4px solid #c9a961; padding: 1.5rem; margin: 2rem 0; }
-        .highlight-box h3 { color: #c9a961; margin-top: 0; }
-        .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
-        .data-card { background-color: #1a1a1a; padding: 1.5rem; border-radius: 4px; border: 1px solid #333; }
-        .data-number { font-size: 2rem; font-weight: 700; color: #c9a961; margin-bottom: 0.5rem; }
-        .data-label { font-size: 0.9rem; color: #999; }
-        .warning-box { background-color: #1a1a00; border-left: 4px solid #c9a961; padding: 1.5rem; margin: 2rem 0; }
-        .warning-box h3 { color: #c9a961; margin-top: 0; font-size: 1.1rem; }
-        .source { font-size: 0.85rem; color: #666; font-style: italic; margin-top: 0.5rem; }
-                .share-section { border-top: 1px solid #333; padding-top: 2rem; margin-top: 3rem; }
-        .share-section h3 { color: #c9a961; font-size: 1.1rem; margin-bottom: 1rem; }
-        .share-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .share-btn { padding: 0.7rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; display: inline-block; color: #fff; }
-        .share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
-        .btn-twitter { background-color: #1DA1F2; }
-        .btn-linkedin { background-color: #0077B5; }
-        .btn-whatsapp { background-color: #25D366; }
-        .btn-email { background-color: #666; }
-        .cta-box { background-color: #c9a961; color: #000; padding: 2rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
-        .cta-box h3 { margin-bottom: 1rem; font-size: 1.5rem; }
-        .btn { display: inline-block; background-color: #000; color: #c9a961; padding: 0.8rem 2rem; text-decoration: none; border-radius: 4px; font-weight: 600; transition: all 0.3s; }
-        .btn:hover { background-color: #111; transform: translateY(-2px); }
-        footer { background-color: #000; padding: 3rem 2rem; border-top: 1px solid #222; text-align: center; }
-        footer p { color: #666; font-size: 0.9rem; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .article { padding: 2rem 1.5rem; } nav ul { gap: 1rem; font-size: 0.8rem; } }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="/" class="logo">STANISLAS <span>LONGO</span></a>
-            <ul>
-                <li><a href="/#livre">Le Livre</a></li>
-                <li><a href="/#lecons">5 Leçons</a></li>
-                <li><a href="/analyses-war-room">Analyses</a></li>
-                <li><a href="/#auteur">À Propos</a></li>
-                <li><a href="/#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="hero">
-        <h1>Analyses War Room</h1>
-        <p class="subtitle">Décryptages stratégiques en temps réel sur les recompositions du pouvoir en Afrique</p>
-    </div>
-    <div class="container">
-        <article class="article">
-            <div class="article-header">
-                <h1 class="article-title">2026 : Les Élections comme Couverture de Guerre Économique</h1>
-                <div class="article-meta">Analyse War Room #2 | 11 janvier 2026 | Par Stanislas Longo</div>
-            </div>
-
-            <div class="section">
-                <h2>LE FAIT</h2>
-                <p>En 2026, l’Afrique entre dans l’une des années électorales les plus denses de son histoire récente : de Cotonou à Kampala, de Brazzaville à Addis-Abeba, les calendriers s’alignent, les commissions électorales publient leurs chronogrammes, les observateurs se préparent.</p>
-                <p>Mais pendant que les projecteurs se braquent sur les urnes, un autre théâtre, plus silencieux, décide réellement du futur : d’un côté, l’affrontement entre blocs régionaux (CEDEAO vs Alliance des États du Sahel) fracture l’Afrique de l’Ouest en deux architectures concurrentes de souveraineté ; de l’autre, la Chine, les États-Unis et l’Union européenne verrouillent leur accès aux minéraux critiques africains (cobalt, cuivre, lithium, bauxite, terres rares) à coups de coalitions, de mémorandums et de contrats de long terme.</p>
-                <p>Officiellement, 2026 est l’année des bulletins. En réalité, c’est l’année des contrats.</p>
-            </div>
-
-            <div class="highlight-box">
-                <h3>L’ANGLE MORT : LOI 7 — LA MISE EN SCÈNE DE LA LÉGITIMITÉ</h3>
-                <p><em>« Quand tout le monde regarde la scène, le stratège investit les coulisses. La légitimité proclamée n’est qu’un masque posé sur des dépendances déjà négociées. »</em></p>
-                <p>Dans les 50 Lois du Pouvoir Contemporain, la Loi 7 rappelle que la légitimité n’est plus seulement un récit, mais une architecture de contraintes : ce qui compte, ce n’est pas seulement qui gagne l’élection, c’est qui a verrouillé les flux dont personne ne peut se passer.</p>
-                <p>En 2026, trois illusions structurent le malentendu :</p>
-                <ul>
-                    <li><strong>Illusion électorale</strong> : croire que le vainqueur du scrutin sera le véritable centre du pouvoir, alors que la continuité des régimes se joue dans la maîtrise des flux (sécurité, énergie, minéraux, dette) bien avant le jour du vote.</li>
-                    <li><strong>Illusion normative</strong> : croire qu’un “stress test démocratique” suffit à définir l’avenir d’un pays, alors que des blocs comme l’Alliance des États du Sahel écrivent leurs propres règles de souveraineté en rupture avec les cadres classiques.</li>
-                    <li><strong>Illusion morale</strong> : croire que les grandes puissances défendent d’abord les valeurs démocratiques, alors qu’elles sécurisent d’abord les chaînes d’approvisionnement en ressources critiques.</li>
-                </ul>
-                <p><strong>L’essentiel :</strong> ce qui est présenté comme “consultation populaire” masque souvent une négociation froide sur les ressources stratégiques et les corridors qui les acheminent.</p>
-            </div>
-
-            <div class="section">
-                <h2>LA DATA : CE QUE LES CHIFFRES DISENT VRAIMENT</h2>
-
-                <h3>1) 2026 : l’hyper-calendrier électoral africain</h3>
-                <ul>
-                    <li>Jamais autant de pays africains n’auront aligné en douze mois des scrutins aussi structurants : présidentielles, législatives et locales se succèdent sur tout le continent, avec des enjeux de succession, de reconduction ou de recomposition profonde.</li>
-                    <li>Dans plusieurs cas, les observateurs parlent moins de “compétition ouverte” que de “test de solidité” des architectures déjà en place : la vraie question n’est pas “qui gagne ?”, mais “dans quel état sort la confiance dans le dispositif ?”.</li>
-                </ul>
-
-                <h3>2) Minéraux critiques : 30% des réserves, 0% de contrôle narratif</h3>
-                <div class="data-grid">
-                    <div class="data-card">
-                        <div class="data-number">30%</div>
-                        <div class="data-label">des réserves mondiales de minéraux critiques situées en Afrique</div>
-                    </div>
-                    <div class="data-card">
-                        <div class="data-number">60–70%</div>
-                        <div class="data-label">des capacités mondiales de transformation contrôlées par la Chine sur certains minerais</div>
-                    </div>
-                    <div class="data-card">
-                        <div class="data-number">3</div>
-                        <div class="data-label">blocs majeurs en compétition : Chine, Occident (UE/USA) et puissances du Golfe autour des mêmes ressources</div>
-                    </div>
-                    <div class="data-card">
-                        <div class="data-number">1</div>
-                        <div class="data-label">continent dont la souveraineté sera définie par sa capacité à passer de fournisseur brut à architecte des conditions d’accès</div>
-                    </div>
-                </div>
-                <p class="source">Sources : The Conversation, 2025 ; analyses sur la stratégie chinoise et occidentale autour des minéraux critiques africains.</p>
-
-                <h3>3) Sahel : la rupture assumée comme stratégie</h3>
-                <ul>
-                    <li>Le divorce entre la CEDEAO et l’Alliance des États du Sahel (Mali, Niger, Burkina Faso) matérialise une Afrique de l’Ouest fracturée en deux architectures de souveraineté concurrentes.</li>
-                    <li>L’AES promeut une doctrine de sécurité autonome, des institutions propres et un récit de rupture qui fait de la sortie des cadres classiques un instrument de légitimité interne.</li>
-                    <li>Le message implicite : là où l’on ne contrôle pas encore toutes les ressources, on tente au moins de réécrire les règles du jeu.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>IMPLICATIONS (SO WHAT?)</h2>
-
-                <h3>Pour les dirigeants africains :</h3>
-                <ul>
-                    <li>S’imaginer que “bien gagner” l’élection suffit est une erreur de première couche. La question clé devient : quelles ressources stratégiques votre pays maîtrise-t-il réellement, dans quel bloc vous les insérez, et quelles marges de manœuvre vous conservez face à vos partenaires ?</li>
-                    <li>Les régimes qui survivront à la décennie ne seront pas ceux qui auront la plus belle mise en scène démocratique, mais ceux qui auront transformé leur position géologique et géopolitique en capacité à dire “non” sans s’effondrer.</li>
-                </ul>
-
-                <h3>Pour les investisseurs et bâtisseurs :</h3>
-                <ul>
-                    <li>Lire un pays seulement en termes de “stabilité politique” est insuffisant. Il faut une cartographie des dépendances : mines, dettes, infrastructures, data, alliances sécuritaires.</li>
-                    <li>Les opportunités robustes se situent là où des acteurs locaux cherchent à monter en gamme (raffinage, transformation, hubs logistiques, industrie) plutôt qu’à rester éternellement fournisseurs de matières premières.</li>
-                </ul>
-
-                <h3>Pour les chancelleries et partenaires extérieurs :</h3>
-                <ul>
-                    <li>Continuer à parler de “valeurs” tout en verrouillant des corridors de minerais critiques est un pari narratif risqué : les sociétés africaines finissent par relier les points et identifier les co-architectes de leurs dépendances.</li>
-                    <li>La vraie menace pour certains intérêts n’est pas l’instabilité politique, mais l’émergence possible d’une coordination africaine sur les minéraux critiques, qui ferait passer l’Afrique du statut de terrain de jeu à celui de co-arbitre.</li>
-                </ul>
-            </div>
-
-            <div class="highlight-box">
-                <h3>LE CHIFFRE QUI TUE</h3>
-                <p><strong>30%</strong> : part des gisements mondiaux de minéraux critiques situés en Afrique.</p>
-                <p>Si ces 30% restent négociés en tête-à-tête entre pays isolés et grandes puissances, les élections serviront surtout à renouveler les visages locaux de la dépendance.</p>
-                <p>Si ces 30% deviennent la base d’une stratégie collective de rareté organisée et de montée en gamme industrielle, le centre de gravité du pouvoir se déplace : la question ne sera plus “qui gouverne tel pays ?”, mais “à quelles conditions le monde accède à ce dont il a besoin ?”.</p>
-            </div>
-
-            <div class="section">
-                <h2>QUESTION STRATÉGIQUE</h2>
-                <p>Pour les décideurs, investisseurs, officiers, bâtisseurs africains :</p>
-                <p><strong>Voulez-vous être ceux qui gagnent les scrutins, ou ceux qui dessinent la carte des dépendances que même vos adversaires ne peuvent contourner ?</strong></p>
-                <p>Les deux ne sont pas incompatibles. Mais ils ne se construisent pas avec les mêmes priorités, ni au même rythme.</p>
-            </div>
-
-            <div class="section">
-                <h2>CONCLUSION : LE MARIONNETTISTE ET LE CARTOGRAPHE</h2>
-                <p>Le marionnettiste s’obsède pour la scène : slogans, coalitions, taux de participation, communiqués de victoire.</p>
-                <p>Le cartographe trace les lignes invisibles : mines, ports, câbles, dettes, alliances, corridors logistiques et minéraux critiques.</p>
-                <p><strong>Le premier croit régner parce qu’il parle plus fort. Le second sait qu’il règne parce que, sans lui, rien ne circule.</strong></p>
-                <p>Dans l’Afrique de 2026, le pouvoir contemporain n’est plus dans la main qui brandit le bulletin, mais dans celle qui tient la carte des flux dont personne ne peut se passer.</p>
-            </div>
-
-            <div class="warning-box">
-                <h3>LIMITES DE L’ANALYSE</h3>
-                <p><strong>Transparence méthodologique :</strong></p>
-                <p>Cette analyse privilégie les rapports de force économiques, géopolitiques et les flux de ressources. Elle minimise :</p>
-                <ul>
-                    <li>Le facteur populaire (mouvements sociaux, révoltes, abstention massive)</li>
-                    <li>Les dynamiques internes des forces armées et des services de sécurité</li>
-                    <li>Les chocs exogènes (crises sanitaires, climatiques ou financières globales)</li>
-                    <li>Les trajectoires propres à chaque pays (histoires nationales, cultures politiques, leadership individuel)</li>
-                </ul>
-                <p><em>Ce n’est pas une prédiction. C’est une grille de lecture pour bâtisseurs.</em></p>
-            </div>
-        </article>
-
-                    <!-- BOUTONS DE PARTAGE -->
-            <div class="share-section">
-                <h3>Partager cette analyse</h3>
-                <div class="share-buttons">
-                    <a href="https://twitter.com/intent/tweet?text=CEMAC%202026%20%3A%20Le%20Sommet%20de%20la%20Derni%C3%A8re%20Chance&url=https://www.stanislas-longo.com/analyses-war-room/cemac-2026-sommet-crise-monetaire" target="_blank" class="share-btn btn-twitter">
-                        Twitter
-                    </a>
-                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.stanislas-longo.com/analyses-war-room/cemac-2026-sommet-crise-monetaire" target="_blank" class="share-btn btn-linkedin">
-                        LinkedIn
-                    </a>
-                    <a href="https://wa.me/?text=CEMAC%202026%20%3A%20Analyse%20strat%C3%A9gique%20-%20https://www.stanislas-longo.com/analyses-war-room/cemac-2026-sommet-crise-monetaire" target="_blank" class="share-btn btn-whatsapp">
-                        WhatsApp
-                    </a>
-                    <a href="mailto:?subject=CEMAC%202026%20%3A%20Analyse%20War%20Room&body=Je%20partage%20cette%20analyse%20%3A%20https://www.stanislas-longo.com/analyses-war-room/cemac-2026-sommet-crise-monetaire" class="share-btn btn-email">
-                        Email
-                    </a>
-                </div>
-            </div>
-
-        <div class="cta-box">
-            <h3>Découvrir l'univers des 50 Lois</h3>
-            <p style="margin-bottom: 1.5rem; color: #333;">Cette analyse illustre la <strong>Loi 1 : Domine le Récit avant la Victoire</strong>, l'une des 50 lois du pouvoir contemporain en Afrique.</p>
-            <a href="/#livre" class="btn">Explorer Les 50 Lois du Pouvoir Contemporain</a>
-        </div>
-
-        <div style="text-align: center; padding: 2rem 0; color: #999;">
-            <p><strong>Autre Analyse War Room</strong></p>
-            <p><a href="/analyses-war-room/guinee-vacance-du-reel" style="color: #c9a961; text-decoration: none;">Guinée : La Victoire qui révèle la Vacance du Réel (Analyse War Room #1)</a></p>
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2026 Stanislas Longo. Tous droits réservés.</p>
-        <p style="margin-top: 0.5rem;">
-            <a href="https://www.linkedin.com/in/stanislas-longo-mba-631a1130" style="color: #c9a961; text-decoration: none;">LinkedIn</a>
-        </p>
-    </footer>
-</body>
-</html>
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Élections et minéraux : ce que les récits laissent hors champ — War Room — Stanislas Longo</title><meta name="description" content="Les campagnes électorales donnent un sens politique aux ressources. Il reste à examiner les clauses, les financements et les capacités industrielles qu’elles engagent.">
+<meta name="theme-color" content="#202623"><link rel="canonical" href="https://www.stanislas-longo.com/analyses-war-room/2026-elections-mineraux-critiques.html">
+<meta property="og:type" content="article"><meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Élections et minéraux : ce que les récits laissent hors champ — War Room — Stanislas Longo"><meta property="og:description" content="Les campagnes électorales donnent un sens politique aux ressources. Il reste à examiner les clauses, les financements et les capacités industrielles qu’elles engagent.">
+<meta property="og:url" content="https://www.stanislas-longo.com/analyses-war-room/2026-elections-mineraux-critiques.html"><meta property="og:image" content="https://www.stanislas-longo.com/assets/stanislas-longo-portrait.png">
+<meta property="og:image:alt" content="Portrait de Stanislas Longo"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/site.css?v=20261011"><script src="/assets/site.js?v=20261011" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Élections et minéraux : ce que les récits laissent hors champ", "description": "Les campagnes électorales donnent un sens politique aux ressources. Il reste à examiner les clauses, les financements et les capacités industrielles qu’elles engagent.", "datePublished": "2026-01-11", "dateModified": "2026-10-11", "author": {"@type": "Person", "name": "Stanislas Longo", "url": "https://www.stanislas-longo.com/#auteur"}, "mainEntityOfPage": "https://www.stanislas-longo.com/analyses-war-room/2026-elections-mineraux-critiques.html"}</script>
+</head><body><a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header"><div class="shell header-inner">
+<a class="brand" href="/">Stanislas Longo<small>Économiste · Dirigeant · Auteur</small></a>
+<nav class="main-nav" aria-label="Navigation principale"><a href="/#livre">Les livres</a><a href="/analyses-war-room/" aria-current="page">War Room</a><a href="/#auteur">L’auteur</a><a href="/#form-section">Lire un extrait ↗</a></nav>
+</div></header>
+<main id="contenu"><div class="shell"><header class="reading-header"><div class="breadcrumb"><a href="/">Accueil</a> / <a href="/analyses-war-room/">War Room</a> / Brief 02</div><p class="eyebrow">War Room · Brief #2</p><h1>Élections et minéraux : ce que les récits laissent hors champ</h1><p class="reading-deck">Une promesse de souveraineté se juge aussi dans les contrats qu’elle autorise.</p><div class="article-meta"><span>Par Stanislas Longo</span><time datetime="2026-01-11">11 janvier 2026</time><span>3 min de lecture</span></div></header>
+<div class="reading-grid"><aside class="reading-aside"><div class="small-label">Champ d’analyse</div><p class="aside-title">Récit politique, contrats, capacités industrielles</p><div class="revision">Parution initiale conservée.<br>Révision éditoriale et doctrinale : 11 octobre 2026.<br>Les faits sont replacés dans l’horizon de la publication initiale.</div></aside>
+<article class="reading-body" aria-label="Texte du brief">
+<section><h2>Deux discussions qui devraient se rencontrer</h2>
+<p>En ce début de 2026, les discours sur la souveraineté africaine accordent une place centrale aux ressources du continent. Les minéraux y apparaissent comme une promesse de puissance industrielle. La promesse est compréhensible. Elle reste incomplète tant qu’on ne précise pas comment la ressource deviendra une activité productive, un revenu public ou une compétence locale.</p>
+<p>Le débat électoral porte volontiers sur la personne capable de défendre cette souveraineté. La négociation économique porte sur des délais, des prix, des garanties et des droits d’accès. Ce sont deux dimensions du même mandat. Les traiter séparément permet à des engagements déterminants de passer derrière des mots auxquels chacun peut souscrire.</p></section>
+<aside class="doctrine"><div class="small-label">Le prisme du livre · Loi 1</div><h2>Domine le récit avant la victoire</h2><blockquote>« Celui qui écrit l’histoire finit par commander aux faits. »</blockquote><cite>Stanislas Longo, <em>Les 50 Lois du Pouvoir Contemporain</em>, PRIME EDIT, p. 2.</cite></aside>
+<section><h2>Le récit prépare les décisions</h2>
+<p>La Loi 1 décrit le pouvoir de celui qui parvient à donner un sens aux événements. Qualifier un contrat de « reconquête », de « partenariat historique » ou de « modernisation » oriente le débat avant même la lecture de ses clauses. Le choix des mots détermine les questions jugées légitimes et celles que l’on renvoie à plus tard.</p>
+<p>Ce mécanisme n’enlève rien à la portée d’une élection. Un mandat peut changer les priorités de l’État et les conditions d’une négociation. Il ne garantit pas que les administrations disposeront des données, des compétences ou du temps nécessaires pour les appliquer. La force du récit et la qualité de l’exécution doivent être examinées séparément.</p>
+<p>On ne peut pas davantage déduire de la seule présence d’un investisseur étranger un projet de dépossession. Certains partenariats apportent un financement, une technologie ou un débouché difficiles à mobiliser autrement. Le jugement doit porter sur leurs obligations et sur les alternatives réellement accessibles au pays concerné.</p></section>
+<section><h2>Ce qu’une promesse industrielle doit contenir</h2>
+<p>Une annonce de transformation locale devient crédible lorsqu’elle indique où se trouveront l’électricité, l’eau, les techniciens et les clients. Une usine sans alimentation fiable ni débouché viable peut immobiliser du capital pendant des années. À l’inverse, une étape moins spectaculaire peut constituer un progrès si elle forme des équipes et ouvre l’accès à un marché.</p>
+<div class="table-wrap"><table><thead><tr><th>Promesse politique</th><th>Élément à vérifier</th></tr></thead><tbody>
+<tr><td>Transformer sur place</td><td>Énergie disponible, coût complet et acheteurs identifiés.</td></tr>
+<tr><td>Créer des emplois</td><td>Métiers concernés, formations financées et calendrier de recrutement.</td></tr>
+<tr><td>Augmenter les recettes</td><td>Assiette fiscale, exonérations et flux effectivement encaissés.</td></tr>
+<tr><td>Récupérer la maîtrise</td><td>Droits de décision, accès aux données et possibilités de renégociation.</td></tr>
+</tbody></table></div>
+<p>Il faut aussi regarder qui assume une baisse des cours ou un retard de construction. La souveraineté promise aujourd’hui peut être diminuée demain par une garantie publique dont le coût avait été laissé hors du discours.</p></section>
+<section><h2>Faire entrer les pièces dans le débat</h2>
+<p>La réponse utile consiste à publier les éléments qui permettent de discuter un projet : engagements, hypothèses, risques et résultats. Les élus doivent pouvoir interroger ces pièces ; l’administration doit pouvoir les corriger. Une controverse fondée sur des documents vaut mieux qu’une unanimité obtenue par une formule assez large pour ne rien engager.</p>
+<p>Ce brief propose une grille de lecture. Il ne prétend pas établir que les élections africaines poursuivent un objectif caché unique. Le récit peut réunir une coalition et donner une direction. Il devient fragile lorsqu’il exige de soustraire les décisions à la vérification.</p></section>
+<section class="source-list"><h2>Sources et périmètre</h2><p>Cette analyse propose une grille de lecture ; elle ne rapporte pas un événement unique et ne présente pas de projection chiffrée.</p><p>Référence doctrinale : <em>Les 50 Lois du Pouvoir Contemporain</em>, PRIME EDIT, loi 1, p. 2. Les applications, questions et recommandations de ce brief sont celles de l’auteur.</p></section><div class="article-bottom"><a href="/analyses-war-room/">← Tous les briefs</a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.stanislas-longo.com%2Fanalyses-war-room%2F2026-elections-mineraux-critiques.html">Partager sur LinkedIn ↗</a></div></article></div></div></main><aside class="book-strip"><div class="shell"><div><div class="eyebrow">Le livre · Décembre 2026</div><h2>Les 50 Lois du Pouvoir Contemporain</h2><p>Manuel de lucidité stratégique pour les bâtisseurs de l’Afrique Nouvelle.</p></div><a class="button secondary" href="/#form-section">Lire un extrait <span aria-hidden="true">↗</span></a></div></aside><footer class="site-footer"><div class="shell"><div class="footer-main"><div><div class="footer-name">Stanislas Longo</div><p>Livres et analyses sur le pouvoir, les institutions et leur capacité à durer.</p></div><nav class="footer-links" aria-label="Liens complémentaires"><a href="/#livre">Les livres</a><a href="/analyses-war-room/">War Room</a><a href="https://www.linkedin.com/in/stanislas-longo-mba-631a1130" class="external-link">LinkedIn</a><a href="https://fundamen.fr" class="external-link">L’éditeur · Fundamen</a></nav></div><div class="footer-bottom"><span>© 2026 Stanislas Longo. Tous droits réservés.</span><span>Site de l’auteur · <a href="https://fundamen.fr">FUNDAMEN ÉDITIONS</a></span></div></div></footer></body></html>

@@ -1,27 +1,16 @@
-# Guide de Lecture
+# Guide de lecture
 
-## Comment utiliser ce manuel de lucidité stratégique
+Notice publique de présentation — référence : PRIME EDIT.
 
-Ce livre n'est pas un essai à lire de manière linéaire de la première à la dernière page. C'est un **système de navigation**.
+La PRIME EDIT comporte six parties :
 
-### Structure de l'ouvrage
-Le manuel est divisé en six parties, chacune abordant une strate différente du pouvoir :
-1. **Les Fondations (Lois 1-8)** : Désapprendre et lire le terrain.
-2. **Les Réseaux (Lois 9-16)** : L'ingénierie des relations et de la dette morale.
-3. **Le Tempo (Lois 17-24)** : Maîtriser le rythme et l'exécution.
-4. **L'Interface (Lois 25-32)** : Gérer l'image, l'opacité et la communication.
-5. **La Structure (Lois 33-40)** : Bâtir des systèmes qui vous survivent.
-6. **La Souveraineté (Lois 41-50)** : Loger son pouvoir dans les flux et la nécessité.
+1. Fondations — lois 1 à 8.
+2. Réseaux d’influence — lois 9 à 16.
+3. Le Temps — lois 17 à 24.
+4. Image et communication — lois 25 à 31.
+5. Le Sommet — lois 32 à 39.
+6. Métaphysique du pouvoir — lois 40 à 50.
 
-### Comment lire chaque loi ?
-Chaque loi est structurée pour un impact immédiat :
-*   **La Formulation Canonique** : Une maxime courte à mémoriser.
-*   **La Logique Universelle** : Le mécanisme de base, valable en tout temps.
-*   **Le Contexte Africain** : L'application spécifique aux terrains fragiles ou contraints.
-*   **Le Cas de Terrain** : Une illustration concrète (vécue ou observée).
-*   **L’Antiloi** : Ce qu’il ne faut surtout pas faire.
-*   **La Chute Opératoire** : La conclusion tactique.
-*   **Questions pour les Bâtisseurs** : Votre propre audit stratégique.
+Un interlude précède la sixième partie. Une loi se lit avec ses conditions d’application, son antiloi et les questions adressées au lecteur. La Partie I complète est disponible dans l’extrait public.
 
-### Où insérer ce guide ?
-Ce guide doit être consulté immédiatement après le **Prologue** et avant d'aborder la **Loi 1**. Il sert de boussole pour l'ensemble du manuel.
+[Lire l’extrait public](/assets/EXTRAITS-MANUSCRIT-AVANT-PROPOS-INTRODUCTION-PARTIE-I-COMPLETE-LES-50-LOIS-DU-POUVOIR-CONTEMPORAIN.pdf)

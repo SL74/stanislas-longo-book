@@ -1,9 +1,7 @@
 # Avant-propos
 
-## Le moment stratégique africain
+Notice publique de présentation — référence : PRIME EDIT.
 
-Les modèles importés ont échoué à produire ce qu’ils promettaient. La démocratie formelle, dépourvue de base économique souveraine, n’est qu’une façade fragile sous laquelle s’opèrent les véritables arbitrages de puissance.
+Le livre examine les conditions dans lesquelles une décision peut devenir une capacité durable. Il part de situations africaines concrètes et soumet ses propositions à la discussion. L’avant-propos est accessible dans l’extrait public.
 
-Ce livre ne propose pas une théorie de plus. Il se veut un manuel de lucidité stratégique pour ceux qui ont choisi de bâtir. Il s'adresse à ceux qui refusent aussi bien la naïveté institutionnelle que le cynisme prédateur, pour se concentrer sur la structuration de systèmes capables de survivre aux individus et aux régimes.
-
-Le moment stratégique africain exige de sortir du "théâtre du pouvoir" pour entrer dans son "architecture". Il s'agit de devenir plus utile, plus dense et plus durable dans un système qui ne pardonne ni les illusions, ni les jeux superficiels.
+[Lire l’extrait public](/assets/EXTRAITS-MANUSCRIT-AVANT-PROPOS-INTRODUCTION-PARTIE-I-COMPLETE-LES-50-LOIS-DU-POUVOIR-CONTEMPORAIN.pdf)

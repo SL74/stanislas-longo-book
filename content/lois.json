@@ -3,105 +3,139 @@
     {
       "id": 1,
       "titre": "Domine le récit avant la victoire",
-      "mantra": "Celui qui écrit l'histoire finit par commander aux faits.",
+      "mantra": "Celui qui écrit l’histoire finit par commander aux faits.",
       "partie": 1,
-      "tag": "Récit"
+      "tag": "Récit",
+      "source_page_pdf": 26,
+      "source_folio": 2
     },
     {
       "id": 2,
-      "titre": "Deviens utile avant d'être visible",
-      "mantra": "Le pouvoir durable attire avant de s'annoncer.",
+      "titre": "Deviens utile avant d’être visible",
+      "mantra": "Le pouvoir durable attire avant de s’annoncer.",
       "partie": 1,
-      "tag": "Utilité"
+      "tag": "Utilité",
+      "source_page_pdf": 30,
+      "source_folio": 6
     },
     {
       "id": 3,
       "titre": "Sois lisible sans être décodable",
       "mantra": "Ce qui est trop lisible devient vulnérable.",
       "partie": 1,
-      "tag": "Opacité"
+      "tag": "Opacité",
+      "source_page_pdf": 34,
+      "source_folio": 10
     },
     {
       "id": 4,
-      "titre": "Ne combats jamais sur un terrain imposé",
-      "mantra": "Toute bataille perdue commence sur un terrain que tu n’as pas choisi.",
+      "titre": "Ne combats jamais sur un terrain que tu n’as pas choisi",
+      "mantra": "Toute bataille perdue commence sur un terrain imposé.",
       "partie": 1,
-      "tag": "Terrain"
+      "tag": "Terrain",
+      "source_page_pdf": 37,
+      "source_folio": 13
     },
     {
       "id": 7,
       "titre": "Ne révèle jamais ton objectif final",
-      "mantra": "Séquence tes intentions pour désorienter les résistances.",
+      "mantra": "L’objectif visible attire les résistances avant les alliances.",
       "partie": 1,
-      "tag": "Séquençage"
+      "tag": "Séquençage",
+      "source_page_pdf": 46,
+      "source_folio": 22
     },
     {
       "id": 8,
       "titre": "Impose ton calme comme hiérarchie naturelle",
-      "mantra": "Dans le chaos, celui qui reste stable devient le centre de gravité.",
+      "mantra": "Dans le chaos, celui qui reste stable devient centre de gravité.",
       "partie": 1,
-      "tag": "Calme"
+      "tag": "Calme",
+      "source_page_pdf": 50,
+      "source_folio": 26
     },
     {
       "id": 9,
       "titre": "Privilégie la dette morale au contrat juridique",
-      "mantra": "L'obligation relationnelle prime sur le formalisme légal.",
+      "mantra": "Dans les systèmes fragiles, la relation pèse plus que le papier.",
       "partie": 2,
-      "tag": "Réseaux"
+      "tag": "Réseaux",
+      "source_page_pdf": 56,
+      "source_folio": 32
     },
     {
       "id": 12,
-      "titre": "La Vacance du Réel",
-      "mantra": "L'absence d'alternative crédible valide la structure arbitrée.",
+      "titre": "Utilise l’empathie comme radar, pas comme refuge",
+      "mantra": "Comprendre n’est pas excuser. C’est anticiper.",
       "partie": 2,
-      "tag": "Structure"
+      "tag": "Empathie",
+      "source_page_pdf": 68,
+      "source_folio": 44
     },
     {
       "id": 17,
-      "titre": "Impose ton rythme",
-      "mantra": "Tant que ton temps appartient aux autres, ton pouvoir leur appartient aussi.",
+      "titre": "Impose ton rythme au lieu de subir celui des autres",
+      "mantra": "Celui qui dicte le tempo dicte la décision.",
       "partie": 3,
-      "tag": "Tempo"
+      "tag": "Tempo",
+      "source_page_pdf": 88,
+      "source_folio": 64
     },
     {
       "id": 24,
       "titre": "Décide lentement, exécute vite",
-      "mantra": "La lenteur est pour la lucidité, la vitesse est pour la surprise.",
+      "mantra": "La lenteur de la décision crée l’illusion de consensus. La rapidité de l’exécution crée le fait accompli.",
       "partie": 3,
-      "tag": "Exécution"
+      "tag": "Exécution",
+      "source_page_pdf": 109,
+      "source_folio": 85
     },
     {
       "id": 32,
-      "titre": "Ne montre jamais toute l'architecture",
-      "mantra": "L'opacité maîtrisée protège sans figer le jeu des flux.",
-      "partie": 4,
-      "tag": "Architecture"
+      "titre": "Ne montre jamais toute l’architecture",
+      "mantra": "Trop révéler, c’est perdre de la profondeur. Et donc en autorité.",
+      "partie": 5,
+      "tag": "Architecture",
+      "source_page_pdf": 138,
+      "source_folio": 114
     },
     {
       "id": 40,
       "titre": "Construis des systèmes qui fonctionnent sans toi",
-      "mantra": "L'Architecte se retire en silence ; son œuvre s'impose par sa propre logique.",
+      "mantra": "Le sommet de ton pouvoir, c’est quand tu peux disparaître et que ça continue.",
       "partie": 6,
-      "tag": "Systèmes"
+      "tag": "Systèmes",
+      "source_page_pdf": 190,
+      "source_folio": 166
     },
     {
       "id": 41,
-      "titre": "Loge ton pouvoir dans les flux",
-      "mantra": "Un titre sans flux n'est qu'une illusion de puissance.",
+      "titre": "Loge ton pouvoir dans les flux, pas dans les titres",
+      "mantra": "Les titres changent. Les flux restent.",
       "partie": 6,
-      "tag": "Flux"
+      "tag": "Flux",
+      "source_page_pdf": 194,
+      "source_folio": 170
     },
     {
       "id": 50,
       "titre": "Deviens nécessaire",
-      "mantra": "Est nécessaire ce qu’il coûte plus cher de remplacer que de protéger.",
+      "mantra": "Deviens nécessaire. Puis rends-toi dispensable.",
       "partie": 6,
-      "tag": "Nécessité"
+      "tag": "Nécessité",
+      "source_page_pdf": 226,
+      "source_folio": 202
     }
   ],
   "metadonnees": {
     "auteur": "Stanislas Longo",
-    "version": "2.1",
-    "description": "Base de données doctrinale pour le site et les analyses War Room."
+    "version": "3.0",
+    "description": "Références doctrinales publiques, alignées sur la PRIME EDIT. Ce catalogue partiel ne contient pas le livre intégral.",
+    "source_edition": "PRIME EDIT",
+    "source_fichier": "LES 50 LOIS DU POUVOIR CONTEMPORAIN - PRIME EDIT.pdf",
+    "source_sha256": "ac3343621768559713cb96528be6a0e271ee110468e11130fb6c7cd5b40f916c",
+    "source_pages_pdf": 275,
+    "source_integrale": "Mémoire éditoriale privée, conservée hors du dépôt public et hors du site.",
+    "mise_a_jour": "2026-10-11"
   }
 }
