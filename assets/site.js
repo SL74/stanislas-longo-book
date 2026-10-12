@@ -26,3 +26,17 @@
     }
   });
 })();
+
+(() => {
+  document.querySelectorAll('[data-copy-url]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const output = button.parentElement.querySelector('.copy-status');
+      try {
+        await navigator.clipboard.writeText(button.dataset.copyUrl);
+        output.textContent = 'Lien copié.';
+      } catch (_) {
+        output.textContent = 'Le lien figure dans la barre d’adresse.';
+      }
+    });
+  });
+})();

@@ -1,8 +1,8 @@
 # Sources et bibliographie
 
-Notice publique de présentation — référence : PRIME EDIT.
+Notice publique de présentation — référence : manuscrit de référence.
 
-Chaque brief donne ses sources publiques dans sa propre page. Les références doctrinales renvoient à la PRIME EDIT, avec le numéro de loi et le folio.
+Chaque brief donne ses sources publiques dans sa propre page. Les références doctrinales renvoient à le manuscrit de référence, avec le numéro de loi et le folio.
 
 La bibliographie complète et les sources documentaires des cas de terrain restent dans le livre. Les anciens fichiers de travail ne doivent pas être cités comme s’ils constituaient la bibliographie de l’édition actuelle.
 

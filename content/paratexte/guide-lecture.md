@@ -1,8 +1,8 @@
 # Guide de lecture
 
-Notice publique de présentation — référence : PRIME EDIT.
+Notice publique de présentation — référence : manuscrit de référence.
 
-La PRIME EDIT comporte six parties :
+Le manuscrit de référence comporte six parties :
 
 1. Fondations — lois 1 à 8.
 2. Réseaux d’influence — lois 9 à 16.

@@ -1,6 +1,6 @@
 # Filiation intellectuelle
 
-Notice publique de présentation — référence : PRIME EDIT.
+Notice publique de présentation — référence : manuscrit de référence.
 
 Les notes de filiation de l’édition de référence précisent les liens entre l’ouvrage et les travaux auxquels il se confronte. Elles ne constituent pas une validation scientifique de chaque application proposée dans les briefs. Leur texte intégral demeure dans le livre.
 

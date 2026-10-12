@@ -1,25 +1,32 @@
-# stanislas-longo-book
+# Site de Stanislas Longo
 
-Site d’auteur de Stanislas Longo : livres, biographie et analyses War Room.
+Site d’auteur : livres, biographie et dix analyses War Room. HTML, CSS et JavaScript statiques, déployés sur Vercel depuis GitHub. Le site de l’éditeur, `fundamen.fr`, reste distinct.
 
-L’identité du site reste distincte de `fundamen.fr`, le site de la maison éditoriale. La parution des **50 Lois du Pouvoir Contemporain** est annoncée pour **décembre 2026**, conformément à la décision éditoriale du 8 octobre. **La République hors bilan** est annoncé pour 2027, avec un renvoi vers l’éditeur.
+## Livres et référence éditoriale
 
-## Référence éditoriale
+Le premier livre s’intitule **Le Pouvoir qui reste**, sous-titré *Manuel de Lucidité Stratégique pour les Bâtisseurs de l’Afrique Nouvelle*. Parution annoncée sur le site : décembre 2026, chez FUNDAMEN ÉDITIONS. Le manuscrit et la couverture définitive ont été fournis par l’auteur le 12 octobre 2026. La couverture est utilisée sans retouche. Le deuxième ouvrage, **La République hors bilan**, figure sur l’accueil avec la mention « À paraître » ; son titre stylisé est conservé.
 
-La référence pour le site et les briefs War Room est la **PRIME EDIT**, fournie par l’auteur le 11 octobre 2026. Son identité et son empreinte SHA-256 sont consignées dans `content/lois.json`.
+Le manuscrit intégral est une mémoire de travail privée. Ne jamais l’ajouter à ce dépôt, à ses branches, aux pull requests ou aux fichiers déployés. Son empreinte figure dans `content/lois.json` pour identifier la référence de travail. Ce fichier ne contient que les quatorze références doctrinales publiques déjà présentes dans le site, pas les cinquante lois complètes. Les notices de `content/paratexte/` ne sont pas des transcriptions du livre.
 
-Le PDF intégral est une mémoire de travail privée. Il reste hors de ce dépôt public, hors des branches et des pull requests publiques, et hors des fichiers déployés. Pour vérifier une citation ou préparer un brief, consulter la copie privée de l’auteur. Ne jamais publier le manuscrit complet, même dans un dossier présenté comme interne.
+Seul l’extrait de 38 pages est téléchargeable : page de titre, avant-propos, introduction et Partie I complète. Il a été extrait du nouveau manuscrit, sans recomposer les pages. Son URL historique dans `assets/` est conservée pour les liens déjà partagés ; le nom proposé au téléchargement et le titre du PDF sont à jour. L’extrait est accessible directement, sans inscription.
 
-Seul l’extrait public est distribué dans `assets/EXTRAITS-MANUSCRIT-AVANT-PROPOS-INTRODUCTION-PARTIE-I-COMPLETE-LES-50-LOIS-DU-POUVOIR-CONTEMPORAIN.pdf`. Il comprend la page de titre, l’avant-propos, l’introduction et la Partie I complète, extraits de la PRIME EDIT. Les liens existants sont conservés.
+## War Room
 
-`content/lois.json` conserve son périmètre public de 14 références : titres, mantras et rattachements aux parties sont contrôlés contre la PRIME EDIT. Ce catalogue partiel ne remplace pas le livre privé. Les fichiers `content/paratexte/` sont de courtes notices publiques ; ils ne sont pas des transcriptions du manuscrit.
+Les dix briefs retrouvent leurs titres, leurs développements et leur structure d’origine, avec des corrections ciblées des références au livre et des faits. Préserver leur voix, leur sujet et leur démonstration lors des prochaines révisions. Une correction ne justifie pas de remplacer un texte par un résumé standard.
 
-Les dix briefs ont été relus et leur référence doctrinale vérifiée. Les titres et contenus peuvent être corrigés ; leurs URL et dates de parution restent stables. La révision du 11 octobre 2026 est indiquée séparément, ainsi que dans `dateModified`. Les dates historiques de la carte et de la page du brief Eskom diffèrent déjà dans la version précédente (15 et 17 février) : cet écart a été conservé pour respecter la consigne de ne modifier aucune date de parution.
+`content/briefs.json` réunit les titres, accroches, URL, dates historiques, lois, citations, folios et sources. Les dates de parution et les URL restent inchangées. Le brief #2 conserve son adresse `.html`. L’écart historique entre la carte d’Eskom (15 février) et sa page (17 février) est conservé. La date de révision est distincte dans les métadonnées. Aucun brief #11 n’est publié.
 
-## Architecture
+Les faits sont à distinguer des interprétations et des propositions. Les sources d’un brief historique doivent être disponibles à sa date de parution ; tout ajout portant sur des événements postérieurs doit être daté comme une actualisation. Ne pas inventer de chiffre pour renforcer une ouverture.
 
-Site statique en HTML/CSS/JavaScript, avec configuration Vercel dans `vercel.json`. Le style commun se trouve dans `assets/site.css` ; le formulaire d’information utilise `assets/site.js` et le point d’entrée Formspree existant. Le téléchargement de l’extrait est direct et indépendant de l’inscription. Aucun test ne doit envoyer une inscription réelle sans demande expresse.
+## Fichiers et publication
 
-L’index de la War Room est `analyses-war-room/index.html`. Chaque analyse possède sa page HTML ; les nouvelles analyses suivent le format `analyses-war-room/<slug>/index.html`. L’analyse #2 utilise historiquement un fichier `.html` direct. Le portrait fourni par l’auteur est hébergé localement dans `assets/stanislas-longo-portrait.png`, sans retouche. La couverture visible est exportée de la première page de la PRIME EDIT.
+- `index.html` : accueil, livres, auteur et extrait.
+- `analyses-war-room/` : index et pages des dix briefs.
+- `assets/site.css` : styles communs, justification et affichage adaptatif. Conserver les familles typographiques actuelles.
+- `assets/site.js` : inscription Formspree et copie des liens. Ne jamais envoyer d’inscription réelle pour un test.
+- `assets/og/` : miniatures de partage 1200 × 630 avec le portrait fourni, sans retouche du visage.
+- `sitemap.xml`, `robots.txt`, `vercel.json` : indexation et hébergement.
 
-Lors d’une nouvelle publication, mettre à jour la page de l’analyse, sa carte dans l’index, les liens de navigation concernés et `sitemap.xml`. La proposition de Brief #11 reste distincte des publications validées.
+Chaque page contient ses métadonnées Open Graph et Twitter dans le HTML initial. Les briefs comportent le profil LinkedIn de l’auteur et les partages LinkedIn, X, WhatsApp et copie du lien. Ne pas inventer de compte social.
+
+Pour une nouvelle publication, mettre à jour la page, `content/briefs.json`, la carte de l’index, le compteur, les liens de lecture, la miniature et le sitemap.

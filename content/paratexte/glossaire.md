@@ -1,6 +1,6 @@
 # Repères de lecture
 
-Notice publique de présentation — référence : PRIME EDIT.
+Notice publique de présentation — référence : manuscrit de référence.
 
 **Capacité** : possibilité effective d’accomplir une tâche, avec des moyens, des compétences et des responsabilités identifiées.
 
