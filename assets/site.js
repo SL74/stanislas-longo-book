@@ -3,26 +3,51 @@
   if (!form) return;
   const status = document.getElementById('formStatus');
   const button = form.querySelector('button[type="submit"]');
+  const download = document.getElementById('excerptDownload');
+  const link = document.getElementById('excerptDownloadLink');
+  if (!status || !button || !download || !link) return;
+  let submitting = false;
+  let registered = false;
+  button.disabled = false;
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    if (!form.reportValidity()) return;
+    if (submitting || registered || !form.reportValidity()) return;
+    // Whitespace alone must not pass the required first-name field.
+    const firstName = form.querySelector('[name="firstName"]');
+    if (!firstName.value.trim()) {
+      firstName.setCustomValidity('Indiquez votre prénom.');
+      firstName.reportValidity();
+      firstName.addEventListener('input', () => firstName.setCustomValidity(''), { once: true });
+      return;
+    }
+    firstName.value = firstName.value.trim();
+    submitting = true;
     button.disabled = true;
+    form.setAttribute('aria-busy', 'true');
     status.textContent = 'Inscription en cours…';
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 15000);
+    const timeout = setTimeout(() => controller.abort(), 20000);
     try {
       const response = await fetch(form.action, {
         method: 'POST', body: new FormData(form),
         headers: { Accept: 'application/json' }, signal: controller.signal
       });
-      if (!response.ok) throw new Error('Envoi non confirmé');
-      status.textContent = 'Votre inscription est confirmée. Vous recevrez les nouvelles de la parution.';
+      const result = await response.json();
+      if (!response.ok || result.ok !== true) throw new Error('Envoi non confirmé');
+      registered = true;
+      download.hidden = false;
+      status.textContent = 'Inscription confirmée. Votre téléchargement démarre. Vous pouvez aussi utiliser le bouton ci-dessous.';
+      button.textContent = 'Inscription confirmée';
       form.reset();
+      link.focus();
+      link.click();
     } catch (error) {
-      status.textContent = 'L’inscription n’a pas pu être confirmée. Vous pouvez réessayer ; l’extrait reste accessible ci-contre.';
+      status.textContent = 'Votre inscription n’a pas pu être confirmée. Vérifiez votre connexion et réessayez : le téléchargement sera disponible après confirmation.';
     } finally {
       clearTimeout(timeout);
-      button.disabled = false;
+      submitting = false;
+      form.removeAttribute('aria-busy');
+      button.disabled = registered;
     }
   });
 })();
@@ -40,3 +65,4 @@
     });
   });
 })();
+
